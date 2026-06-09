@@ -5,19 +5,20 @@ public class CycleEvent_EmergeBear : CycleEvent
 {
     [SerializeField] VoidEventChannel gunShotEvent;
     [SerializeField] RuntimeConditionData bearAlive;
-    [SerializeField] GameObject Bear;
-
+    [SerializeField] Bear bear;
+    [SerializeField] string onShotAnimatorTrigger = "OnShotted";
     int bearLife = 3;
 
     private void Awake()
     {
-        Bear.SetActive(false);
+        bear.gameObject.SetActive(false);
     }
     protected override void Raise()
     {
         if(ConditionChecker.Check(data.requires, bearAlive))
         {
-            Bear.SetActive(true);
+            bear.gameObject.SetActive(true);
+            bear.anim.ResetTrigger(onShotAnimatorTrigger);
             IsPlaying = true;
             gunShotEvent.OnEventRaised -= HandleGunShotted;
             gunShotEvent.OnEventRaised += HandleGunShotted;
@@ -25,6 +26,7 @@ public class CycleEvent_EmergeBear : CycleEvent
     }
     void HandleGunShotted()
     {
+        bear.anim.SetTrigger(onShotAnimatorTrigger);
         gunShotEvent.OnEventRaised -= HandleGunShotted;
         IsPlaying = false;
         if (bearAlive.value)
@@ -33,7 +35,7 @@ public class CycleEvent_EmergeBear : CycleEvent
             if(bearLife == 0)
             {
                 bearAlive.value = false;
-                Bear.SetActive(false);
+                bear.gameObject.SetActive(false);
             }
         }
     }
