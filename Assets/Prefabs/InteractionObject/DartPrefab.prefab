@@ -24,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78444696262239408}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.93588924, z: -0.3522943, w: 0}
+  m_LocalRotation: {x: -0, y: -0.90702593, z: -0.4210749, w: 0}
   m_LocalPosition: {x: 0, y: 0.032695673, z: 0.17700666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6542325612195174777}
-  m_LocalEulerAnglesHint: {x: -41.255, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: -49.805, y: 180, z: 0}
 --- !u!1 &4579087023624288884
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 5466108390538420080}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
