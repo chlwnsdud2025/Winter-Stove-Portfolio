@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1620333575909765441}
   - component: {fileID: 435989994052176312}
   - component: {fileID: 184890348868528658}
+  - component: {fileID: 8617187982797467460}
   m_Layer: 0
   m_Name: DartPrefab
   m_TagString: Untagged
@@ -256,6 +257,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d01d571633500b4a9bacc1b6933bc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DartBehavior
+--- !u!114 &8617187982797467460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579087023624288884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee218f49fb8b21748bb8da7c5cab9644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResettableItem
+  itemType: 1
 --- !u!1001 &6719857754420821650
 PrefabInstance:
   m_ObjectHideFlags: 0
