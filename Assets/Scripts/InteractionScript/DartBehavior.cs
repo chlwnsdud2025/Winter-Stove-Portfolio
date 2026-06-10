@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
@@ -53,7 +53,7 @@ public class DartBehavior : MonoBehaviour
         if (isFlying && !isStuck)
         {
             // 관통 방지: 다음 프레임에 이동할 거리만큼 미리 감지 (Raycast)
-            float rayDistance = rb.linearVelocity.magnitude * Time.fixedDeltaTime + 0.25f;
+            float rayDistance = rb.linearVelocity.magnitude * Time.fixedDeltaTime + 0.1f;
             RaycastHit hit;
 
             if (Physics.Raycast(transform.position, transform.forward, out hit, rayDistance))

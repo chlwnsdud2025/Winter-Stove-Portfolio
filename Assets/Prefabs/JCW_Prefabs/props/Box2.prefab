@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: dfb3e5aba1d75444bb839a7799a832da, type: 3}
       propertyPath: m_Name
-      value: Storage box_L (1)
+      value: Box2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: dfb3e5aba1d75444bb839a7799a832da, type: 3}
       propertyPath: m_StaticEditorFlags
