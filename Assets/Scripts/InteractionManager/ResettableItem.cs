@@ -1,8 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class ResettableItem : MonoBehaviour
 {
-    // 아이템 종류 정의
     public enum ItemType { Jenga, Dart, Card }
 
     [Header("이 아이템의 종류를 선택하세요")]
@@ -12,6 +11,9 @@ public class ResettableItem : MonoBehaviour
     private Quaternion startRotation;
     private Rigidbody rb;
 
+    // FixedUpdate에서 안전하게 리셋하기 위한 신호등(플래그)
+    private bool needsReset = false;
+
     void Start()
     {
         startPosition = transform.position;
@@ -19,29 +21,50 @@ public class ResettableItem : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    // 버튼이 이 함수를 호출합니다.
     public void ResetIfMatchingType(ItemType targetType)
     {
-        // 버튼이 요청한 종류와 내 종류가 일치할 때만 리셋 진행
         if (itemType == targetType)
         {
-            ResetToOrigin();
+            // 즉시 이동시키지 않고, 리셋 예약만 걸어둡니다.
+            needsReset = true;
         }
     }
 
-    private void ResetToOrigin()
+    // 물리 엔진이 계산되는 타이밍에 맞춰 실행됩니다.
+    void FixedUpdate()
     {
+        // 예약된 리셋이 있다면 여기서 처리합니다.
+        if (needsReset)
+        {
+            PerformPhysicsReset();
+            needsReset = false; // 완료 후 다시 false로 되돌림
+        }
+    }
+
+    // 실제 이동과 물리 초기화 로직
+    private void PerformPhysicsReset()
+    {
+        if (rb != null)
+        {
+            // 이동 중 충돌 방지를 위해 물리를 잠깐 끕니다.
+            rb.isKinematic = true;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.Sleep();
+        }
+
+        // 안전한 물리 타이밍에 위치와 회전을 복구합니다.
         transform.position = startPosition;
         transform.rotation = startRotation;
 
         if (rb != null)
         {
+            // 이동 완료 후 다시 물리를 켭니다.
             rb.isKinematic = false;
             rb.useGravity = true;
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
         }
 
-        // 다트 상태 초기화 (다트 스크립트가 있을 때만 실행)
         SendMessage("ForceReset", SendMessageOptions.DontRequireReceiver);
     }
 }
