@@ -14,7 +14,7 @@ public class CycleEvent_WaterPlant : CycleEvent
     }
     protected override void Raise()
     {
-        Debug.Log("²ÉÀÌ ½Ãµç´Ù...");
+        Debug.Log("ê½ƒì´ ì‹œë“ ë‹¤...");
         var value = Mathf.Max(plantScalingParent.transform.localScale.x - 0.2f, 0f);
         plantScalingParent.transform.DOScale(value, 1f);
     }
@@ -24,7 +24,7 @@ public class CycleEvent_WaterPlant : CycleEvent
         if ((transform.position - wateringCan.transform.position).magnitude <= wateringDistanceThreshold 
             && Vector3.Dot((transform.position - wateringCan.transform.position), wateringCan.transform.forward) > 0)
         {
-            Debug.Log("²ÉÀÌ ÀÚ¶õ´Ù...");
+            Debug.Log("ê½ƒì´ ìë€ë‹¤...");
             var value = 1;
             plantScalingParent.transform.DOScale(value, 1f);
         }
