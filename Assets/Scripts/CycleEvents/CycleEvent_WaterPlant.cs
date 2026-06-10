@@ -15,7 +15,7 @@ public class CycleEvent_WaterPlant : CycleEvent
     protected override void Raise()
     {
         Debug.Log("꽃이 시든다...");
-        var value = Mathf.Max(plantScalingParent.transform.localScale.x - 0.2f, 0f);
+        var value = Mathf.Max(plantScalingParent.transform.localScale.x - witheringPower, 0f);
         plantScalingParent.transform.DOScale(value, 1f);
     }
 
