@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
@@ -94,5 +94,11 @@ public class DartBehavior : MonoBehaviour
         {
             isFlying = false;
         }
+    }
+
+    public void ForceReset()
+    {
+        isFlying = false;
+        isStuck = false; // 꽂힌 상태 해제
     }
 }
