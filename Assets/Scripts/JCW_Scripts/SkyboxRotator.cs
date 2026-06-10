@@ -12,4 +12,8 @@ public class SkyboxRotator : MonoBehaviour
         float current = RenderSettings.skybox.GetFloat("_Rotation");
         RenderSettings.skybox.SetFloat("_Rotation", current + rotationSpeed * Time.deltaTime);
     }
+    private void OnDestroy()
+    {
+        RenderSettings.skybox.SetFloat("_Rotation", 0);
+    }
 }
