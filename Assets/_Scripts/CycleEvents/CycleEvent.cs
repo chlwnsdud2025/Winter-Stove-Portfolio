@@ -18,8 +18,7 @@ public abstract class CycleEvent : MonoBehaviour
     }
     protected virtual void Update()
     {
-        // ensure no multiple event occur
-        if (IsPlaying)
+        if (IsPlaying || CheckRequired() == false)
         {
             StartTime = Time.time;
             return;
@@ -35,5 +34,13 @@ public abstract class CycleEvent : MonoBehaviour
             StartTime = Time.time;
             if(Random.value <= data.rate) Raise();
         }
+    }
+    bool CheckRequired()
+    {
+        for(int i = 0;i  < data.requires.Length; i++)
+        {
+            if (data.requires[i].achived == false) return false;
+        }
+        return true;
     }
 }
