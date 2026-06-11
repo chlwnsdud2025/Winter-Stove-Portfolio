@@ -22,4 +22,8 @@ public static class ConditionChecker
 
         return requires[0].value == currentConditions.value;
     }
+    public static bool Check(ConditionData requires, RuntimeConditionData currentConditions)
+    {
+        return requires.value == currentConditions.value;
+    }
 }
