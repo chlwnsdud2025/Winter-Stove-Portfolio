@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CycleEvent_EmergeBear
   data: {fileID: 11400000, guid: 0425786550849764381a9fa314e9a2f9, type: 2}
   gunShotEvent: {fileID: 11400000, guid: c31efd90099c3ff4caf5976dfb0dc0b1, type: 2}
-  bearAlive: {fileID: 11400000, guid: dfcb2d58b416af64ba56a82d3494e510, type: 2}
+  bearDead: {fileID: 11400000, guid: 0dee09371a0136b4da3a67b3b156a4e3, type: 2}
   bear: {fileID: 0}
   onShotAnimatorTrigger: OnShotted
