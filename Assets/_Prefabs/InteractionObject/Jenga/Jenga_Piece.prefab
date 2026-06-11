@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4821572127223113112}
   - component: {fileID: 8558433031350019803}
   - component: {fileID: 6098459000686840079}
+  - component: {fileID: 3338127337879544109}
   m_Layer: 0
   m_Name: Jenga_Piece
   m_TagString: Untagged
@@ -212,6 +213,19 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &3338127337879544109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790386121309297716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee218f49fb8b21748bb8da7c5cab9644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResettableItem
+  itemType: 0
 --- !u!1 &3921750745684431662
 GameObject:
   m_ObjectHideFlags: 0
