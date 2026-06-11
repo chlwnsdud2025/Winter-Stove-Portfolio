@@ -1076,6 +1076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jenga
       objectReference: {fileID: 0}
+    - target: {fileID: 576776775157413010, guid: b6c683a836a3be149ad39dccdd09f428, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6994655475563339072, guid: b6c683a836a3be149ad39dccdd09f428, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.348
@@ -14367,6 +14371,10 @@ PrefabInstance:
     - target: {fileID: 6987070106076349554, guid: 47eb3bcb3e3c9454688005de6f551f1b, type: 3}
       propertyPath: m_Name
       value: Card_Deck
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987070106076349554, guid: 47eb3bcb3e3c9454688005de6f551f1b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7161109891388775629, guid: 47eb3bcb3e3c9454688005de6f551f1b, type: 3}
       propertyPath: m_IsTrigger

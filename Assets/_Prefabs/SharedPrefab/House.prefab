@@ -1606,6 +1606,10 @@ PrefabInstance:
       propertyPath: linesParent
       value: 
       objectReference: {fileID: 4394548196946506187}
+    - target: {fileID: 1733926378542930169, guid: 007681a2ba130fc4392c44a777735c82, type: 3}
+      propertyPath: recognitionThreshold
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2484351889224911113, guid: 007681a2ba130fc4392c44a777735c82, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5000001
@@ -2994,6 +2998,10 @@ PrefabInstance:
       propertyPath: linesParent
       value: 
       objectReference: {fileID: 4394548196946506187}
+    - target: {fileID: 1733926378542930169, guid: e0174ac23fe24b44d83b2a81a8cb1c15, type: 3}
+      propertyPath: recognitionThreshold
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2484351889224911113, guid: e0174ac23fe24b44d83b2a81a8cb1c15, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5000001
@@ -5320,6 +5328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jenga
       objectReference: {fileID: 0}
+    - target: {fileID: 1648482315815673641, guid: b6c683a836a3be149ad39dccdd09f428, type: 3}
+      propertyPath: jengaChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 8dfd1e6350b5cd3478473992719343d1, type: 2}
     - target: {fileID: 6994655475563339072, guid: b6c683a836a3be149ad39dccdd09f428, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.118
@@ -6488,6 +6500,10 @@ PrefabInstance:
       propertyPath: linesParent
       value: 
       objectReference: {fileID: 4394548196946506187}
+    - target: {fileID: 1733926378542930169, guid: 02d49da47590744459aa4ece0d29878c, type: 3}
+      propertyPath: recognitionThreshold
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2484351889224911113, guid: 02d49da47590744459aa4ece0d29878c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5000001

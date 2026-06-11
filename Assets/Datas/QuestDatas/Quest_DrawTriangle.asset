@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cc2c4d767767164ba85e1af42263e83, type: 3}
-  m_Name: Quest_DrawHeart
+  m_Name: Quest_DrawTriangle
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  text: Draw Heart!!
+  text: Draw Triangle!!
   condition: {fileID: 11400000, guid: 251740fef8fffa24ca9a57c9878ebeb5, type: 2}
   preQuests: []
