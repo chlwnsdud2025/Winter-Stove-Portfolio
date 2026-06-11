@@ -4,7 +4,7 @@ using UnityEngine;
 public class CycleEvent_EmergeBear : CycleEvent
 {
     [SerializeField] VoidEventChannel gunShotEvent;
-    [SerializeField] RuntimeConditionData bearAlive;
+    [SerializeField] ConditionData bearDead;
     [SerializeField] Bear bear;
     [SerializeField] string onShotAnimatorTrigger = "OnShotted";
     int bearLife = 3;
@@ -15,7 +15,7 @@ public class CycleEvent_EmergeBear : CycleEvent
     }
     protected override void Raise()
     {
-        if(ConditionChecker.Check(data.requires, bearAlive))
+        if(bearDead.achived == false)
         {
             bear.gameObject.SetActive(true);
             bear.anim.ResetTrigger(onShotAnimatorTrigger);
@@ -29,12 +29,12 @@ public class CycleEvent_EmergeBear : CycleEvent
         bear.anim.SetTrigger(onShotAnimatorTrigger);
         gunShotEvent.OnEventRaised -= HandleGunShotted;
         IsPlaying = false;
-        if (bearAlive.value)
+        if (bearDead.achived == false)
         {
             bearLife--;
             if(bearLife == 0)
             {
-                bearAlive.value = false;
+                bearDead.achived = true;
                 bear.gameObject.SetActive(false);
             }
         }

@@ -4,6 +4,7 @@ using UnityEngine;
 public class CycleEvent_WaterPlant : CycleEvent
 {
     [SerializeField] VoidEventChannel wateredEvent;
+    [SerializeField] ConditionData watered;
     [SerializeField] GameObject wateringCan;
     [SerializeField] Transform plantScalingParent;
     [SerializeField] float wateringDistanceThreshold = 1f;
@@ -14,7 +15,6 @@ public class CycleEvent_WaterPlant : CycleEvent
     }
     protected override void Raise()
     {
-        Debug.Log("꽃이 시든다...");
         var value = Mathf.Max(plantScalingParent.transform.localScale.x - witheringPower, 0f);
         plantScalingParent.transform.DOScale(value, 1f);
     }
@@ -24,9 +24,9 @@ public class CycleEvent_WaterPlant : CycleEvent
         if ((transform.position - wateringCan.transform.position).magnitude <= wateringDistanceThreshold 
             && Vector3.Dot((transform.position - wateringCan.transform.position), wateringCan.transform.forward) > 0)
         {
-            Debug.Log("꽃이 자란다...");
             var value = 1;
             plantScalingParent.transform.DOScale(value, 1f);
+            watered.achived = true;
         }
     }
     
