@@ -531,6 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7abfe258c19fc854d8ae65e400e17515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunBehavior
+  GunshotChannel: {fileID: 11400000, guid: c31efd90099c3ff4caf5976dfb0dc0b1, type: 2}
   firePoint: {fileID: 8984028404266406696}
   muzzleFlashPrefab: {fileID: 4555144586691392786, guid: 3072d27b46e61ec4e88a189004849eff, type: 3}
   destroyDelay: 0.5
