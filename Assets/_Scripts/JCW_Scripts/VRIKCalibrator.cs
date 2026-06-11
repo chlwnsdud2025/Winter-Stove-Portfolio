@@ -33,11 +33,7 @@ public class VRIKCalibrator : MonoBehaviour
         vrik.solver.rightArm.target = rightHandTarget;
 
 
-        RootMotion.FinalIK.VRIKCalibrator.Settings settings =
-              new RootMotion.FinalIK.VRIKCalibrator.Settings();
-        RootMotion.FinalIK.VRIKCalibrator.Calibrate(
-            vrik, settings, headTarget, null, leftHandTarget, rightHandTarget);
-
+      
     }
 
     private void LateUpdate()
