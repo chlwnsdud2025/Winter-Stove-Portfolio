@@ -7,6 +7,8 @@ public class GunBehavior : MonoBehaviour
 {
     private XRGrabInteractable grabInteractable;
 
+    public VoidEventChannel GunshotChannel;
+
     [Header("발사 위치 (총구 끝에 배치할 빈 오브젝트)")]
     public Transform firePoint;
 
@@ -33,6 +35,8 @@ public class GunBehavior : MonoBehaviour
             // 1. 지정된 FirePoint의 위치와 회전값으로 이펙트 프리팹 동적 생성
             // (파티클 프리팹에 'Play On Awake'가 켜져 있으면 생성되자마자 바로 불꽃이 터집니다)
             GameObject flashInstance = Instantiate(muzzleFlashPrefab, firePoint.position, firePoint.rotation);
+
+            GunshotChannel.RaiseEvent();
 
             // 2. [중요] 프리팹 방식의 필수 처리! 
             // 찌꺼기 오브젝트가 Hierarchy에 계속 쌓여 렉이 걸리지 않도록 일정 시간 뒤 자동으로 삭제합니다.

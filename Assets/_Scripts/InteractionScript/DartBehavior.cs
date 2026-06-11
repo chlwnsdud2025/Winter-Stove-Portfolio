@@ -5,46 +5,43 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 [RequireComponent(typeof(Rigidbody))]
 public class DartBehavior : MonoBehaviour
 {
+    [Header("다트 판정 세팅")]
+    public Transform dartTip; // 다트 끝부분(뾰족한 곳)에 넣을 빈 오브젝트
+    public float hitCheckRadius = 0.01f; // 판정 반경 (1cm 정도로 아주 작게)
+    public float raycastrength = 0.01f;
+
     private Rigidbody rb;
     private XRGrabInteractable grabInteractable;
 
     private bool isFlying = false;
     private bool isStuck = false;
 
+    public VoidEventChannel dartHitChannel;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         grabInteractable = GetComponent<XRGrabInteractable>();
 
-        // XRI 이벤트 구독
         grabInteractable.selectExited.AddListener(OnThrow);
         grabInteractable.selectEntered.AddListener(OnGrab);
     }
 
-    // 다트를 손에서 놓았을 때 (던질 때)
     private void OnThrow(SelectExitEventArgs args)
     {
         isFlying = true;
         isStuck = false;
 
-        // 던지는 순간 물리 연산 활성화
         rb.isKinematic = false;
         rb.useGravity = true;
     }
 
-    // 다트를 다시 잡았을 때 (뽑을 때)
     private void OnGrab(SelectEnterEventArgs args)
     {
         if (isStuck)
         {
-            // 상태만 초기화해 줍니다.
             isStuck = false;
             isFlying = false;
-
-            // [수정 핵심 1] 
-            // 문제를 일으키던 SetParent(null)을 하지 않습니다 (애초에 부모 설정을 안 하므로).
-            // 또한, 손에 쥐고 있는 동안 물리를 강제로 켜던 코루틴(ResetPhysicsAfterGrab)을 완전히 제거했습니다.
-            // 손에 쥐고 있는 동안의 물리는 XRI 내부 시스템이 완벽하게 안전하게 제어하도록 내버려 둡니다.
         }
     }
 
@@ -52,16 +49,31 @@ public class DartBehavior : MonoBehaviour
     {
         if (isFlying && !isStuck)
         {
-            // 관통 방지: 다음 프레임에 이동할 거리만큼 미리 감지 (Raycast)
-            float rayDistance = rb.linearVelocity.magnitude * Time.fixedDeltaTime + 0.1f;
+            // [수정 1] 레이저 시작점을 다트 끝(dartTip)으로 설정합니다.
+            Vector3 rayOrigin = dartTip != null ? dartTip.position : transform.position;
+
+            // 다음 프레임에 이동할 거리(속도 기반) + 여유 거리 계산
+            float rayDistance = rb.linearVelocity.magnitude * Time.fixedDeltaTime + raycastrength;
             RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, transform.forward, out hit, rayDistance))
+            if (Physics.Raycast(rayOrigin, transform.forward, out hit, rayDistance))
             {
-                if (hit.collider.CompareTag("DartBoard"))
+                if (hit.collider.CompareTag("DartBoard") || hit.collider.CompareTag("DartMiddle"))
                 {
+                    // [핵심 로직: 순간이동] 멈추기 전에 다트 끝부분을 다트판 표면(hit.point)에 정확히 맞춥니다.
+                    if (dartTip != null)
+                    {
+                        // hit.point(목표점)와 현재 dartTip의 거리 차이만큼 다트 전체를 이동시킵니다.
+                        transform.position += (hit.point - dartTip.position);
+                    }
+                    else
+                    {
+                        transform.position = hit.point;
+                    }
+
+                    // 위치를 맞춘 후 멈춤 및 점수 판독을 실행합니다.
                     StickToBoard();
-                    return; // 꽂혔으므로 아래 비행 로직 건너뜀
+                    return;
                 }
             }
 
@@ -78,19 +90,41 @@ public class DartBehavior : MonoBehaviour
         isFlying = false;
         isStuck = true;
 
-        // [수정 핵심 2] SetParent를 쓰지 않고 Rigidbody를 완벽히 고정(Kinematic)하여 공중에 멈춥니다.
+        // 물리 연산 강제 정지
         rb.isKinematic = true;
         rb.useGravity = false;
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+
+        // 완벽하게 정지 및 표면에 부착된 직후, 점수를 판독합니다.
+        EvaluateScore();
+    }
+
+    // 다트 끝부분(Tip)을 기준으로 점수를 판독하는 함수
+    private void EvaluateScore()
+    {
+        if (dartTip == null) return;
+
+        // 다트 끝부분 위치에서 hitCheckRadius(1cm) 반경 내에 있는 모든 콜라이더를 검사합니다.
+        Collider[] hitColliders = Physics.OverlapSphere(dartTip.position, hitCheckRadius);
+
+        foreach (Collider hitCol in hitColliders)
+        {
+            // 그 중 DartMiddle 태그를 가진 트리거가 있다면?
+            if (hitCol.CompareTag("DartMiddle"))
+            {
+                dartHitChannel.RaiseEvent();
+                Debug.Log("중앙 명중");
+                return; // 점수를 확인했으니 반복문 종료
+            }
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if (isStuck) return;
 
-        // 다트보드 이외의 물체에 부딪혔을 때 비행 중단
-        if (!collision.gameObject.CompareTag("DartBoard"))
+        if (!collision.gameObject.CompareTag("DartBoard") && !collision.gameObject.CompareTag("DartMiddle"))
         {
             isFlying = false;
         }
@@ -99,6 +133,36 @@ public class DartBehavior : MonoBehaviour
     public void ForceReset()
     {
         isFlying = false;
-        isStuck = false; // 꽂힌 상태 해제
+        isStuck = false;
+    }
+
+    // 씬 창에서 다트 끝부분의 판정 반경과 레이저를 눈으로 볼 수 있게 해줍니다.
+    private void OnDrawGizmos()
+    {
+        Rigidbody tempRb = GetComponent<Rigidbody>();
+        if (tempRb != null)
+        {
+            // [수정 2] 기즈모 레이저의 시작점도 다트 끝(dartTip)으로 맞춥니다.
+            Vector3 startPos = dartTip != null ? dartTip.position : transform.position;
+
+            // 다트가 멈춰있을 때 선이 완전히 사라지는 착시를 방지하기 위해 최소 길이를 보장합니다.
+            float speed = tempRb.linearVelocity.magnitude;
+            float rayDistance = (speed > 0.1f ? speed * Time.fixedDeltaTime : 0.2f) + raycastrength;
+
+            // 파란 선 그리기
+            Gizmos.color = Color.blue;
+            Gizmos.DrawRay(startPos, transform.forward * rayDistance);
+
+            // 레이저 끝부분 빨간 구슬
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(startPos + transform.forward * rayDistance, 0.01f);
+
+            // (보너스) 다트 끝부분(Tip)에 점수 판정(OverlapSphere) 범위도 노란색으로 그려줍니다.
+            if (dartTip != null)
+            {
+                Gizmos.color = Color.yellow;
+                Gizmos.DrawWireSphere(dartTip.position, hitCheckRadius);
+            }
+        }
     }
 }

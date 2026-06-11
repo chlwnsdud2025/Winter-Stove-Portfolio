@@ -172,6 +172,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3935577900689446196, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935577900689446196, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: minimumImpact
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412945719250043915, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565905108566448525, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565905108566448525, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: minimumImpact
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8493727295817844363, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
       propertyPath: m_Name
       value: House
@@ -181,6 +201,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6591241641155417105, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 2011975850786409553, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
@@ -15004,6 +15027,18 @@ PrefabInstance:
     - target: {fileID: 6906218771426080874, guid: b2490f3489281bf43bebf225d612975e, type: 3}
       propertyPath: m_Name
       value: Punching_Bag
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006028600147396502, guid: b2490f3489281bf43bebf225d612975e, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560777558049737655, guid: b2490f3489281bf43bebf225d612975e, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560777558049737655, guid: b2490f3489281bf43bebf225d612975e, type: 3}
+      propertyPath: minimumImpact
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
