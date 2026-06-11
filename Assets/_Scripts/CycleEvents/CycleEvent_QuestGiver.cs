@@ -44,7 +44,7 @@ public class CycleEvent_QuestGiver : CycleEvent
         // 새 퀘스트 추가
         for (int i = 0; i < questDatas.Length; i++)
         {
-            if(showedQuest[i].state == QuestStates.Sleep && IsPreQuestCleaered(questDatas[i]))
+            if(questDatas[i].state == QuestStates.Sleep && IsPreQuestCleaered(questDatas[i]))
             {
                 AddQuest(questDatas[i]);
                 questDatas[i].state = QuestStates.Running;
