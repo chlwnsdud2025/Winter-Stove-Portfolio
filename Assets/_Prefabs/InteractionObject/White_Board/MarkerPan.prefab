@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 9217922019860993915}
   - component: {fileID: 1733926378542930169}
   m_Layer: 0
-  m_Name: MarkerPan (Red)
+  m_Name: MarkerPan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 7420125714131214188}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.637639, y: 3.9566052, z: 0.99669474}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -259,11 +259,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRMarker
   tip: {fileID: 7732114663628491793}
-  linePrefab: {fileID: 3248891126073391011, guid: 9f0552a15c70b6548835e5ebb466017d, type: 3}
+  linePrefab: {fileID: 3248891126073391011, guid: b158e387b4aa65c4ba2e590670042f90, type: 3}
   drawDistance: 0.15
   boardLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 256
+  linesParent: {fileID: 0}
 --- !u!1 &8452443091530559779
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +290,7 @@ Transform:
   m_GameObject: {fileID: 8452443091530559779}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0676}
+  m_LocalPosition: {x: 0, y: 0, z: 0.065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -361,7 +362,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b26559bad2e70be468341a23561888c6, type: 2}
+  - {fileID: 8200854374590609862, guid: 88bec33eef1837f49828a8f3a7cf397a, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
