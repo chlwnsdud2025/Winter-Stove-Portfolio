@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7933292537e96a24c9b65490e4586c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkyboxRotator
-  rotationSpeed: 0.5
+  rotationSpeed: 0.1
