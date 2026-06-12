@@ -8,6 +8,7 @@ public class GunBehavior : MonoBehaviour
     private XRGrabInteractable grabInteractable;
 
     public VoidEventChannel GunshotChannel;
+    //public ConditionData gunshot;
 
     [Header("발사 위치 (총구 끝에 배치할 빈 오브젝트)")]
     public Transform firePoint;
@@ -37,6 +38,7 @@ public class GunBehavior : MonoBehaviour
             GameObject flashInstance = Instantiate(muzzleFlashPrefab, firePoint.position, firePoint.rotation);
 
             GunshotChannel.RaiseEvent();
+            //gunshot.achived = true;
 
             // 2. [중요] 프리팹 방식의 필수 처리! 
             // 찌꺼기 오브젝트가 Hierarchy에 계속 쌓여 렉이 걸리지 않도록 일정 시간 뒤 자동으로 삭제합니다.

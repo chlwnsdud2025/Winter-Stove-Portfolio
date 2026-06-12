@@ -15,6 +15,7 @@ public class PunchingBag : MonoBehaviour
 
 
     public VoidEventChannel punchChannel;
+    public ConditionData Pucnch_1000Score;
     private void OnCollisionEnter(Collision collision)
     {
         // [CCTV 1] 무언가 샌드백에 부딪히긴 했는지 확인
@@ -53,6 +54,7 @@ public class PunchingBag : MonoBehaviour
         if( finalScore >= 1000)
         {
             punchChannel.RaiseEvent();
+            Pucnch_1000Score.achived = true;
         }
         if (scoreText != null)
         {

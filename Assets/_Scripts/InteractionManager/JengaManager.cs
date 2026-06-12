@@ -14,6 +14,7 @@ public class JengaManager : MonoBehaviour
     [HideInInspector]
     public bool isGameOver = false;
 
+    public ConditionData jenga_7time;
     //[Header("UI 연결")]
     //public TMP_Text statusText; // 화면에 정보를 띄울 TextMeshPro
 
@@ -57,6 +58,7 @@ public class JengaManager : MonoBehaviour
     {
         isGameOver = true; // 성공 시 더 이상 카운트가 오르지 않게 막음
         jengaChannel.RaiseEvent();
+        jenga_7time.achived = true;
         //statusText.text = " 도전과제 달성! 성공! ";
         Debug.Log("성공!");
     }
