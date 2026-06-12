@@ -139,8 +139,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd3d897a40c59444a3070313005b545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JengaManager
+  jengaChannel: {fileID: 11400000, guid: 8dfd1e6350b5cd3478473992719343d1, type: 2}
   targetSuccessCount: 5
   isGameOver: 0
+  jenga_7time: {fileID: 11400000, guid: a36f9bece0ad54c4ea2449b5bc4af33a, type: 2}
 --- !u!1 &2322641609626657122
 GameObject:
   m_ObjectHideFlags: 0
