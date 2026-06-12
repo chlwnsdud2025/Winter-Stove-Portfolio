@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1178791450436251564, guid: 95a33e14d0163eb4287697f19289f15e, type: 3}
       propertyPath: m_RequestedTrackingOriginMode
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: 95a33e14d0163eb4287697f19289f15e, type: 3}
       propertyPath: m_Name
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvatarManager
   avatarRoot: {fileID: 8794462493794512433}
-  defaultAvatar: {fileID: 5364530377445806012, guid: 389b51458dd6cfa4a8ae53aeeeafe680, type: 3}
+  defaultAvatar: {fileID: 6547030452413913828, guid: 15b76593f0ff3c94ca050b2edbc09c23, type: 3}
   headTarget: {fileID: 5417501784482880569}
   leftHandTarget: {fileID: 5417501782962043995}
   rightHandTarget: {fileID: 5417501784329338042}
