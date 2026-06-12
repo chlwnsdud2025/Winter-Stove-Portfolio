@@ -70,7 +70,7 @@ public class CycleEvent_QuestGiver : CycleEvent
     {
         for (int i = 0; i < MAX_VIEWED_QUEST; i++)
         {
-            if (showedQuest[i] != null)
+            if (showedQuest[i] != null && showedQuest[i] == data)
             {
                 showedQuest[i] = null;
                 cachedTmpros[i].gameObject.SetActive(false);
