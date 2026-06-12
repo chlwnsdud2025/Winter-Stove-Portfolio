@@ -35,7 +35,17 @@ public class VRIKCalibrator : MonoBehaviour
 
       
     }
+    public void Initialize(
+    Transform head,
+    Transform leftHand,
+    Transform rightHand)
+    {
+        headTarget = head;
+        leftHandTarget = leftHand;
+        rightHandTarget = rightHand;
 
+        SetupVRIK(vrik);
+    }
     private void LateUpdate()
     {
         // 캐릭터 위치 동기화
@@ -74,5 +84,12 @@ public class VRIKCalibrator : MonoBehaviour
 
         if (dir.magnitude > maxHandDistance)
             handTarget.position = shoulderPos + dir.normalized * maxHandDistance;
+    }
+    public void SetupVRIK(VRIK newVrik)
+    {
+        vrik = newVrik;
+        vrik.solver.spine.headTarget = headTarget;
+        vrik.solver.leftArm.target = leftHandTarget;
+        vrik.solver.rightArm.target = rightHandTarget;
     }
 }
