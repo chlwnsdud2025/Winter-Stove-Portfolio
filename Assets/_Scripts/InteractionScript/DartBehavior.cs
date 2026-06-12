@@ -17,7 +17,7 @@ public class DartBehavior : MonoBehaviour
     private bool isStuck = false;
 
     public VoidEventChannel dartHitChannel;
-
+    public ConditionData darthit_Middle;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -114,6 +114,7 @@ public class DartBehavior : MonoBehaviour
             if (hitCol.CompareTag("DartMiddle"))
             {
                 dartHitChannel.RaiseEvent();
+                darthit_Middle.achived = true;
                 Debug.Log("중앙 명중");
                 return; // 점수를 확인했으니 반복문 종료
             }

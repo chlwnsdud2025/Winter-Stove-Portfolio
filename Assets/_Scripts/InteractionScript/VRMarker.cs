@@ -24,6 +24,8 @@ public class VRMarker : MonoBehaviour
     // $1 인식기 인스턴스
     private DollarRecognizer recognizer;
 
+    public ConditionData DrawSuccess;
+
     void Awake()
     {
         recognizer = new DollarRecognizer();
@@ -124,6 +126,7 @@ public class VRMarker : MonoBehaviour
         if (result.Score >= recognitionThreshold)
         {
             drawTrigangle.RaiseEvent();
+            DrawSuccess.achived = true;
             Debug.Log($"[그림 인식 성공] 형태: {result.Name} (일치율: {result.Score * 100:F1}%)");
 
             // 실전 활용 예시 코드:
