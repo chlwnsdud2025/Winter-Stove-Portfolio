@@ -1675,6 +1675,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5566425875358118346}
     m_Modifications:
     - target: {fileID: 1733926378542930169, guid: 007681a2ba130fc4392c44a777735c82, type: 3}
+      propertyPath: DrawSuccess
+      value: 
+      objectReference: {fileID: 11400000, guid: 251740fef8fffa24ca9a57c9878ebeb5, type: 2}
+    - target: {fileID: 1733926378542930169, guid: 007681a2ba130fc4392c44a777735c82, type: 3}
       propertyPath: linesParent
       value: 
       objectReference: {fileID: 4394548196946506187}
@@ -1752,6 +1756,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2514250174559150937}
     m_Modifications:
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: trashCan
+      value: 
+      objectReference: {fileID: 5449286492489597379}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: TrashGoalin
+      value: 
+      objectReference: {fileID: 11400000, guid: b64bebd1be6947c4cae8a30947b417fb, type: 2}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: requiredDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3961213643678749026, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
       propertyPath: m_Name
       value: Trash (5)
@@ -1938,6 +1954,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2514250174559150937}
     m_Modifications:
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: trashCan
+      value: 
+      objectReference: {fileID: 5449286492489597379}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: TrashGoalin
+      value: 
+      objectReference: {fileID: 11400000, guid: b64bebd1be6947c4cae8a30947b417fb, type: 2}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: requiredDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3961213643678749026, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
       propertyPath: m_Name
       value: Trash (6)
@@ -2461,6 +2489,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8594023972841072816}
     m_Modifications:
+    - target: {fileID: 184890348868528658, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
+      propertyPath: darthit_Middle
+      value: 
+      objectReference: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
     - target: {fileID: 2592990094956071194, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.999
@@ -2865,6 +2897,10 @@ PrefabInstance:
       propertyPath: punchChannel
       value: 
       objectReference: {fileID: 11400000, guid: a58b452d830a7ae429bce2155770a48b, type: 2}
+    - target: {fileID: 2931694332801091342, guid: b2490f3489281bf43bebf225d612975e, type: 3}
+      propertyPath: Pucnch_1000Score
+      value: 
+      objectReference: {fileID: 11400000, guid: c8b71771e27ad8d488615d5806225295, type: 2}
     - target: {fileID: 5360815783226516528, guid: b2490f3489281bf43bebf225d612975e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.31
@@ -2927,6 +2963,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8594023972841072816}
     m_Modifications:
+    - target: {fileID: 184890348868528658, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
+      propertyPath: darthit_Middle
+      value: 
+      objectReference: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
     - target: {fileID: 2592990094956071194, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.406
@@ -3191,6 +3231,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5566425875358118346}
     m_Modifications:
     - target: {fileID: 1733926378542930169, guid: e0174ac23fe24b44d83b2a81a8cb1c15, type: 3}
+      propertyPath: DrawSuccess
+      value: 
+      objectReference: {fileID: 11400000, guid: 251740fef8fffa24ca9a57c9878ebeb5, type: 2}
+    - target: {fileID: 1733926378542930169, guid: e0174ac23fe24b44d83b2a81a8cb1c15, type: 3}
       propertyPath: linesParent
       value: 
       objectReference: {fileID: 4394548196946506187}
@@ -3330,6 +3374,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8594023972841072816}
     m_Modifications:
+    - target: {fileID: 184890348868528658, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
+      propertyPath: darthit_Middle
+      value: 
+      objectReference: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
     - target: {fileID: 2592990094956071194, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.693
@@ -3598,6 +3646,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8594023972841072816}
     m_Modifications:
+    - target: {fileID: 184890348868528658, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
+      propertyPath: darthit_Middle
+      value: 
+      objectReference: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
     - target: {fileID: 2592990094956071194, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.301
@@ -4169,6 +4221,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2514250174559150937}
     m_Modifications:
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: trashCan
+      value: 
+      objectReference: {fileID: 5449286492489597379}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: TrashGoalin
+      value: 
+      objectReference: {fileID: 11400000, guid: b64bebd1be6947c4cae8a30947b417fb, type: 2}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: requiredDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3961213643678749026, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
       propertyPath: m_Name
       value: Trash (3)
@@ -4356,6 +4420,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8594023972841072816}
     m_Modifications:
+    - target: {fileID: 184890348868528658, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
+      propertyPath: darthit_Middle
+      value: 
+      objectReference: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
     - target: {fileID: 2592990094956071194, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.595
@@ -4714,6 +4782,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2514250174559150937}
     m_Modifications:
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: trashCan
+      value: 
+      objectReference: {fileID: 5449286492489597379}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: TrashGoalin
+      value: 
+      objectReference: {fileID: 11400000, guid: b64bebd1be6947c4cae8a30947b417fb, type: 2}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: requiredDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3961213643678749026, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
       propertyPath: m_Name
       value: Trash (1)
@@ -4890,6 +4970,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2514250174559150937}
     m_Modifications:
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: trashCan
+      value: 
+      objectReference: {fileID: 5449286492489597379}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: TrashGoalin
+      value: 
+      objectReference: {fileID: 11400000, guid: b64bebd1be6947c4cae8a30947b417fb, type: 2}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: requiredDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3961213643678749026, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
       propertyPath: m_Name
       value: Trash (2)
@@ -4952,6 +5044,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8594023972841072816}
     m_Modifications:
+    - target: {fileID: 184890348868528658, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
+      propertyPath: darthit_Middle
+      value: 
+      objectReference: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
     - target: {fileID: 2592990094956071194, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.797
@@ -5014,6 +5110,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8594023972841072816}
     m_Modifications:
+    - target: {fileID: 184890348868528658, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
+      propertyPath: darthit_Middle
+      value: 
+      objectReference: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
     - target: {fileID: 2592990094956071194, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.504
@@ -5138,6 +5238,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8594023972841072816}
     m_Modifications:
+    - target: {fileID: 184890348868528658, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
+      propertyPath: darthit_Middle
+      value: 
+      objectReference: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
     - target: {fileID: 2592990094956071194, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.895
@@ -5402,6 +5506,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2514250174559150937}
     m_Modifications:
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: trashCan
+      value: 
+      objectReference: {fileID: 5449286492489597379}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: TrashGoalin
+      value: 
+      objectReference: {fileID: 11400000, guid: b64bebd1be6947c4cae8a30947b417fb, type: 2}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: requiredDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3961213643678749026, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
       propertyPath: m_Name
       value: Trash (4)
@@ -5639,6 +5755,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8594023972841072816}
     m_Modifications:
+    - target: {fileID: 184890348868528658, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
+      propertyPath: darthit_Middle
+      value: 
+      objectReference: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
     - target: {fileID: 2592990094956071194, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.103
@@ -5772,6 +5892,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jenga
       objectReference: {fileID: 0}
+    - target: {fileID: 1648482315815673641, guid: b6c683a836a3be149ad39dccdd09f428, type: 3}
+      propertyPath: jenga_7time
+      value: 
+      objectReference: {fileID: 11400000, guid: a36f9bece0ad54c4ea2449b5bc4af33a, type: 2}
     - target: {fileID: 1648482315815673641, guid: b6c683a836a3be149ad39dccdd09f428, type: 3}
       propertyPath: jengaChannel
       value: 
@@ -6477,6 +6601,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8594023972841072816}
     m_Modifications:
+    - target: {fileID: 184890348868528658, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
+      propertyPath: darthit_Middle
+      value: 
+      objectReference: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
     - target: {fileID: 2592990094956071194, guid: acc1404522820b34cb4ebfce5750b2a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.2
@@ -6671,6 +6799,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2514250174559150937}
     m_Modifications:
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: trashCan
+      value: 
+      objectReference: {fileID: 5449286492489597379}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: TrashGoalin
+      value: 
+      objectReference: {fileID: 11400000, guid: b64bebd1be6947c4cae8a30947b417fb, type: 2}
+    - target: {fileID: 969955633753394325, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
+      propertyPath: requiredDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3961213643678749026, guid: dc0751dcdf72ab244865bbc90e50fe51, type: 3}
       propertyPath: m_Name
       value: Trash
@@ -7064,6 +7204,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5566425875358118346}
     m_Modifications:
+    - target: {fileID: 1733926378542930169, guid: 02d49da47590744459aa4ece0d29878c, type: 3}
+      propertyPath: DrawSuccess
+      value: 
+      objectReference: {fileID: 11400000, guid: 251740fef8fffa24ca9a57c9878ebeb5, type: 2}
     - target: {fileID: 1733926378542930169, guid: 02d49da47590744459aa4ece0d29878c, type: 3}
       propertyPath: linesParent
       value: 
