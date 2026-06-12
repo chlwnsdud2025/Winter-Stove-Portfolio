@@ -9,7 +9,5 @@ public class AvatarSelector : MonoBehaviour
     {
         AvatarManager.Instance
             .ChangeAvatar(avatarPrefab);
-
-        Debug.Log("아바타교체");
     }
 }
