@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 572609031589837044}
   - component: {fileID: 8691341995764269581}
   - component: {fileID: 222626272685602276}
-  - component: {fileID: 6655019713808104973}
   m_Layer: 0
   m_Name: boxergloves
   m_TagString: Untagged
@@ -91,27 +90,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6655019713808104973
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1238863822120194416}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 18.436388, y: 34.26361, z: 7.7656956}
-  m_Center: {x: 1.7808981, y: 17.131805, z: 0.73851097}
 --- !u!1 &1451029453108413213
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,9 +102,10 @@ GameObject:
   - component: {fileID: 5240707150531885442}
   - component: {fileID: 1095483275780568516}
   - component: {fileID: 2362379954341542946}
+  - component: {fileID: 8442762238017111674}
   m_Layer: 0
   m_Name: boxergloves-2020-obj
-  m_TagString: Untagged
+  m_TagString: Glove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +174,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &2362379954341542946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,7 +257,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_PredictedVisualsTransform: {fileID: 572609031589837044}
   m_VelocityDamping: 1
   m_VelocityScale: 1
@@ -325,6 +304,27 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!65 &8442762238017111674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451029453108413213}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.10889268, y: 0.17135334, z: 0.050392628}
+  m_Center: {x: 0.01665628, y: 0.09369135, z: -0.0022232533}
 --- !u!1 &4838366209134346203
 GameObject:
   m_ObjectHideFlags: 0

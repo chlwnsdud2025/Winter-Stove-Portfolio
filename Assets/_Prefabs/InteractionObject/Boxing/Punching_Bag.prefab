@@ -325,9 +325,10 @@ GameObject:
   - component: {fileID: 8154972658550392284}
   - component: {fileID: 8998273637469811729}
   - component: {fileID: 6510554112555505994}
-  - component: {fileID: 8006028600147396502}
   - component: {fileID: 2172404766993873447}
   - component: {fileID: 1954844805055229947}
+  - component: {fileID: 4294618211108533416}
+  - component: {fileID: 2931694332801091342}
   m_Layer: 0
   m_Name: bag
   m_TagString: Untagged
@@ -409,28 +410,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8006028600147396502
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3475560346627123965}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7033663635467597644, guid: dd9975be15b668d4fb92116dd6e234fb, type: 3}
 --- !u!54 &2172404766993873447
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -439,9 +418,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3475560346627123965}
   serializedVersion: 5
-  m_Mass: 100
-  m_LinearDamping: 1
-  m_AngularDamping: 2
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -457,7 +436,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!144 &1954844805055229947
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -504,6 +483,45 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!136 &4294618211108533416
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3475560346627123965}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.077423856
+  m_Height: 0.5053857
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2931694332801091342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3475560346627123965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c1029067de404995fb9ad619502fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PunchingBag
+  scoreMultiplier: 100
+  minimumImpact: 2
+  hitCooldown: 0.5
+  scoreText: {fileID: 0}
 --- !u!1 &6906218771426080874
 GameObject:
   m_ObjectHideFlags: 0

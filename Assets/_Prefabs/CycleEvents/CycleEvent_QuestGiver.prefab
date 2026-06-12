@@ -224,7 +224,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4103015682548658170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +257,10 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 19183e3be14627f498dd67838a605bcf, type: 2}
   questDatas:
   - {fileID: 11400000, guid: 48899120ace64a94db4c4ec15e26a9b1, type: 2}
+  - {fileID: 11400000, guid: 17cc940557f81ed4a9a19b4279605177, type: 2}
+  - {fileID: 11400000, guid: 7374317a862ae484582e977f48400e84, type: 2}
+  - {fileID: 11400000, guid: a82441f3a79e9094197af6480038d840, type: 2}
+  - {fileID: 11400000, guid: d5e234ee62d238a4a8dd57df74b06685, type: 2}
   parent: {fileID: 887106616404977153}
   prefab: {fileID: 2217142297452951643, guid: c645daaab7a4a0948ae852ba6c68af35, type: 3}
   MAX_VIEWED_QUEST: 6

@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6542325612195174777}
   m_LocalEulerAnglesHint: {x: -49.805, y: 180, z: 0}
+--- !u!1 &4484724511630059416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8036799952091877462}
+  m_Layer: 0
+  m_Name: Tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8036799952091877462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4484724511630059416}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.18857}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2592990094956071194}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4579087023624288884
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,6 +97,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6542325612195174777}
+  - {fileID: 8036799952091877462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1576066565256012453
@@ -243,8 +275,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.02, z: 0.24}
-  m_Center: {x: 0, y: 0, z: 0.06}
+  m_Size: {x: 0.02, y: 0.02, z: 0.19137417}
+  m_Center: {x: 0, y: 0, z: 0.035687067}
 --- !u!114 &184890348868528658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +289,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d01d571633500b4a9bacc1b6933bc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DartBehavior
+  dartTip: {fileID: 8036799952091877462}
+  hitCheckRadius: 0.01
+  raycastrength: 0.1
+  dartHitChannel: {fileID: 11400000, guid: f4868e22772e06345a0e89c0c6699599, type: 2}
 --- !u!114 &8617187982797467460
 MonoBehaviour:
   m_ObjectHideFlags: 0
