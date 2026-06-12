@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -400,6 +400,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6591241641155417105, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 2011975850786409553, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
 --- !u!1 &1187058664 stripped
 GameObject:
@@ -576,8 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CycleEventViewer
   prefab: {fileID: 7277144665873673670, guid: 4fe97be65fd93f942a0f76f996f84843, type: 3}
-  cycles:
-  - {fileID: 0}
+  cycles: []
 --- !u!114 &1631905500
 MonoBehaviour:
   m_ObjectHideFlags: 0
