@@ -36,7 +36,7 @@ public class AvatarManager : MonoBehaviour
     {
         if (prefab == null)
         {
-            Debug.LogError("변경할 Avatar Prefab이 비어있습니다.");
+            
             return;
         }
 
@@ -52,9 +52,7 @@ public class AvatarManager : MonoBehaviour
 
         if (calibrator == null)
         {
-            Debug.LogError(
-                currentAvatar.name +
-                " 에 VRIKCalibrator 컴포넌트가 없습니다.");
+           
 
             return;
         }
@@ -64,6 +62,6 @@ public class AvatarManager : MonoBehaviour
             leftHandTarget,
             rightHandTarget);
 
-        Debug.Log("아바타 변경 완료 : " + currentAvatar.name);
+       
     }
 }
