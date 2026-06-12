@@ -13,6 +13,8 @@ public class CatController : MonoBehaviour
     public float walkSpeed = 1.0f;
     public float runSpeed = 3.5f;
 
+    [HideInInspector] public bool wasSleepingBeforeGrab = false;
+
     // 1. 상태 머신 및 개별 상태들 선언 (프로퍼티와 필드 혼용 스타일)
     public CatStateMachine stateMachine { get; private set; }
     public CatIdleState idleState { get; private set; }
@@ -21,6 +23,10 @@ public class CatController : MonoBehaviour
 
     public CatPettedState pettedState { get; private set; }
     public CatGrabbedState grabbedState { get; private set; }
+
+    public CatPutDownState putDownState { get; private set; }
+    public CatSleepState sleepState { get; private set; }
+
 
     // (향후 추가될 상태들 미리 예시 선언)
     // public CatSleepState sleepState { get; private set; }
@@ -39,8 +45,9 @@ public class CatController : MonoBehaviour
         runState = new CatRunState(this, stateMachine);
         pettedState = new CatPettedState(this, stateMachine);
         grabbedState = new CatGrabbedState(this, stateMachine);
-
-    }
+        putDownState = new CatPutDownState(this, stateMachine);
+        sleepState = new CatSleepState(this, stateMachine);
+}
 
     private void Start()
     {
@@ -80,13 +87,16 @@ public class CatController : MonoBehaviour
     // 고양이를 집어 들었을 때 (XR Grab Interactable의 Select Entered에 연결)
     public void OnGrabEntered()
     {
+        // 잡히는 순간, 현재 상태가 SleepState였다면 true로 기록해 둡니다.
+        // (SleepState 스크립트를 구현하셨다는 가정 하에 작성)
+        wasSleepingBeforeGrab = (stateMachine.CurrentState == sleepState);
+
         stateMachine.ChangeState(grabbedState);
     }
 
-    // 고양이를 바닥에 놓았을 때 (XR Grab Interactable의 Select Exited에 연결)
     public void OnGrabExited()
     {
-        // 바닥에 놓여졌으니 다시 대기 상태로 돌아가 AI를 켭니다.
-        stateMachine.ChangeState(idleState);
+        // 바닥에 놓으면 즉시 Idle이 아니라, 내려놓는 애니메이션 상태로 보냅니다.
+        stateMachine.ChangeState(putDownState);
     }
 }
