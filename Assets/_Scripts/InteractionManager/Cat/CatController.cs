@@ -27,6 +27,8 @@ public class CatController : MonoBehaviour
     public CatPutDownState putDownState { get; private set; }
     public CatSleepState sleepState { get; private set; }
 
+    public CatStrechState strechState { get; private set; }
+
 
     // (향후 추가될 상태들 미리 예시 선언)
     // public CatSleepState sleepState { get; private set; }
@@ -47,6 +49,7 @@ public class CatController : MonoBehaviour
         grabbedState = new CatGrabbedState(this, stateMachine);
         putDownState = new CatPutDownState(this, stateMachine);
         sleepState = new CatSleepState(this, stateMachine);
+        strechState = new CatStrechState(this, stateMachine);
 }
 
     private void Start()
