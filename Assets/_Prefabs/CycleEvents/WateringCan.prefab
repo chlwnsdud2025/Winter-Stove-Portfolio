@@ -1,5 +1,72 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3407672995769715236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8612567210242480852}
+  - component: {fileID: 1149970657396887214}
+  - component: {fileID: 4375514334845613150}
+  m_Layer: 0
+  m_Name: PotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8612567210242480852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407672995769715236}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.25485212, y: -0, z: -0, w: 0.96698004}
+  m_LocalPosition: {x: 0, y: 1.241, z: 1.898}
+  m_LocalScale: {x: 1.2652, y: 1.2652, z: 4.1407466}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1428302522436322728}
+  m_LocalEulerAnglesHint: {x: -29.53, y: 0, z: 0}
+--- !u!65 &1149970657396887214
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407672995769715236}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4375514334845613150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407672995769715236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daab041c4f813a44385d35ecb6bff972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WateringCan
+  wateringEvent: {fileID: 11400000, guid: 164e67dd6de546c419e919922b10d65b, type: 2}
 --- !u!1001 &93960906439135509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27,18 +94,18 @@ PrefabInstance:
     - target: {fileID: 919132147767488674, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
       propertyPath: m_OnEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 8146971772052307548}
+      objectReference: {fileID: 4375514334845613150}
     - target: {fileID: 919132147767488674, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
       propertyPath: m_OnBegin.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 8146971772052307548}
+      objectReference: {fileID: 4375514334845613150}
     - target: {fileID: 919132147767488674, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
       propertyPath: m_OnEnd.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132147767488674, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
       propertyPath: m_OnEnd.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: RaiseWaterEvent
+      value: EndPooring
       objectReference: {fileID: 0}
     - target: {fileID: 919132147767488674, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
       propertyPath: m_OnBegin.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
@@ -46,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132147767488674, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
       propertyPath: m_OnBegin.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: RaiseWaterEvent
+      value: StartPooring
       objectReference: {fileID: 0}
     - target: {fileID: 919132147767488674, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
       propertyPath: m_OnEnd.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -110,27 +177,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1861211284762578439, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8146971772052307548}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1341942267753567421, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 8612567210242480852}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
---- !u!1 &1772598833015742226 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1861211284762578439, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
+--- !u!4 &1428302522436322728 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1341942267753567421, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
   m_PrefabInstance: {fileID: 93960906439135509}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8146971772052307548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772598833015742226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daab041c4f813a44385d35ecb6bff972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WateringCan
-  wateringEvent: {fileID: 11400000, guid: 164e67dd6de546c419e919922b10d65b, type: 2}
