@@ -9,6 +9,8 @@ TagManager:
   - DartMiddle
   - Glove
   - JengaZone
+  - TrashCanZone
+  - FlowerPot
   layers:
   - Default
   - TransparentFX

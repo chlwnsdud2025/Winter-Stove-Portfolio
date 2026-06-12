@@ -111,6 +111,10 @@ PrefabInstance:
       value: FlowerpotWithPlants
       objectReference: {fileID: 0}
     - target: {fileID: 4715735836189526966, guid: dbe77c1a45c18354b9ff23b6aae0dba0, type: 3}
+      propertyPath: m_TagString
+      value: FlowerPot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715735836189526966, guid: dbe77c1a45c18354b9ff23b6aae0dba0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -230,7 +234,5 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 8ec68452c556c1048883eb3e417087f2, type: 2}
   wateredEvent: {fileID: 11400000, guid: 164e67dd6de546c419e919922b10d65b, type: 2}
   watered: {fileID: 11400000, guid: 97fef43256baa4a4bba647c52580fcec, type: 2}
-  wateringCan: {fileID: 0}
   plantScalingParent: {fileID: 7513084661976794135}
-  wateringDistanceThreshold: 1
   witheringPower: 0.2
