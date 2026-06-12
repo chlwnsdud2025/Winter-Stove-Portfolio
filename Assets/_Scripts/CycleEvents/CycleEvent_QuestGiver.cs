@@ -38,6 +38,7 @@ public class CycleEvent_QuestGiver : CycleEvent
             {
                 RmvQuest(showedQuest[i]);
                 questDatas[i].state = QuestStates.Cleared;
+                CycleEvent_Nuclear.Postpone();
             }
         }
 

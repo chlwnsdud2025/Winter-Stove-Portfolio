@@ -4,11 +4,13 @@ using UnityEngine;
 public abstract class CycleEvent : MonoBehaviour
 {
     public CycleEventData data;
-    
+
     public bool IsPlaying { get; protected set; }
     public float StartTime { get; protected set; }
     public bool IsFirstEvent { get; protected set; }
 
+    private float postponeAmount = 0f;
+    protected void Postpone(float value) => postponeAmount += value;
     protected abstract void Raise();
     
     private void Start()
@@ -23,14 +25,16 @@ public abstract class CycleEvent : MonoBehaviour
             StartTime = Time.time;
             return;
         }
-        if(IsFirstEvent && Time.time - StartTime > data.elapseTimeNeed)
+        if(IsFirstEvent && Time.time - StartTime > data.elapseTimeNeed + postponeAmount)
         {
+            postponeAmount = 0;
             StartTime = Time.time;
             IsFirstEvent = false;
             if(Random.value <= data.rate) Raise();
         }
-        else if(Time.time - StartTime > data.termTimeNeed)
+        else if(Time.time - StartTime > data.termTimeNeed + postponeAmount)
         {
+            postponeAmount = 0;
             StartTime = Time.time;
             if(Random.value <= data.rate) Raise();
         }
