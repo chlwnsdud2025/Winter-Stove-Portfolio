@@ -297,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrashItem
   trashCan: {fileID: 0}
   requiredDistance: 2
+  TrashGoalin: {fileID: 11400000, guid: b64bebd1be6947c4cae8a30947b417fb, type: 2}
 --- !u!1 &4981308583134822933
 GameObject:
   m_ObjectHideFlags: 0

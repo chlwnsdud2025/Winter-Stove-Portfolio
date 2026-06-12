@@ -522,6 +522,8 @@ MonoBehaviour:
   minimumImpact: 2
   hitCooldown: 0.5
   scoreText: {fileID: 0}
+  punchChannel: {fileID: 11400000, guid: a58b452d830a7ae429bce2155770a48b, type: 2}
+  Pucnch_1000Score: {fileID: 11400000, guid: c8b71771e27ad8d488615d5806225295, type: 2}
 --- !u!1 &6906218771426080874
 GameObject:
   m_ObjectHideFlags: 0

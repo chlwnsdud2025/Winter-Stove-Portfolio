@@ -267,6 +267,7 @@ MonoBehaviour:
   linesParent: {fileID: 0}
   recognitionThreshold: 0.4
   drawTrigangle: {fileID: 11400000, guid: 01ad0361c23b4924586979da1419c08e, type: 2}
+  DrawSuccess: {fileID: 11400000, guid: 251740fef8fffa24ca9a57c9878ebeb5, type: 2}
 --- !u!1 &8452443091530559779
 GameObject:
   m_ObjectHideFlags: 0

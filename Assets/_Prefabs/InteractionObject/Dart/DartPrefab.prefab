@@ -293,6 +293,7 @@ MonoBehaviour:
   hitCheckRadius: 0.01
   raycastrength: 0.1
   dartHitChannel: {fileID: 11400000, guid: f4868e22772e06345a0e89c0c6699599, type: 2}
+  darthit_Middle: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
 --- !u!114 &8617187982797467460
 MonoBehaviour:
   m_ObjectHideFlags: 0
