@@ -24,7 +24,7 @@ public class CatIdleState : CatBaseState
 
         // 3. 이번 대기 상태에서 얼마나 멍때릴지 결정 (2초 ~ 5초 사이 랜덤)
         idleTimer = 0f;
-        idleDuration = Random.Range(2f, 5f);
+        idleDuration = 1f;
     }
 
     public override void Update()
@@ -52,24 +52,28 @@ public class CatIdleState : CatBaseState
         int rand = Random.Range(0, 100);
 
         // 확률 분기 (CatController에 정의될 상태들을 호출)
-        if (rand < 50)
+        if (rand < 40)
         {
-            // 50% 확률로 주변을 걸어다님
-            //stateMachine.ChangeState(cat.walkState);
+            // 40% 확률로 주변을 걸어다님
+            stateMachine.ChangeState(cat.walkState);
+        }
+        else if (rand < 50)
+        {
+            // 10% 확률로 낮잠 청하기
+            stateMachine.ChangeState(cat.sleepState);
         }
         else if (rand < 70)
         {
-            // 20% 확률로 낮잠 청하기
-            //stateMachine.ChangeState(cat.sleepState);
+            // 20% 확률로 우다다 뛰어다님
+            stateMachine.ChangeState(cat.runState);
         }
-        else if (rand < 85)
+        else if( rand < 90)
         {
-            // 15% 확률로 우다다 뛰어다님
-            //stateMachine.ChangeState(cat.runState);
+            stateMachine.ChangeState(cat.strechState);
         }
         else
         {
-            // 15% 확률로 제자리에서 한 번 더 멍 때리기 (타이머만 새로 갱신)
+            // 10% 확률로 제자리에서 한 번 더 멍 때리기 (타이머만 새로 갱신)
             idleTimer = 0f;
             idleDuration = Random.Range(2f, 4f);
         }
