@@ -1,12 +1,15 @@
 
+using System.Collections;
 using UnityEngine;
 
 public class CycleEvent_EmergeBear : CycleEvent
 {
     [SerializeField] VoidEventChannel gunShotEvent;
     [SerializeField] ConditionData bearDead;
+    [SerializeField] AudioClip bear_Growling;
     [SerializeField] Bear bear;
     [SerializeField] string onShotAnimatorTrigger = "OnShotted";
+    [SerializeField] string onDeadAnimatorTrigger = "OnDead";
     int bearLife = 3;
 
     private void Awake()
@@ -19,6 +22,7 @@ public class CycleEvent_EmergeBear : CycleEvent
         {
             bear.gameObject.SetActive(true);
             bear.anim.ResetTrigger(onShotAnimatorTrigger);
+            SoundManager.Instance.PlaySFX(bear_Growling, bear.transform.position);
             IsPlaying = true;
             gunShotEvent.OnEventRaised -= HandleGunShotted;
             gunShotEvent.OnEventRaised += HandleGunShotted;
@@ -35,9 +39,18 @@ public class CycleEvent_EmergeBear : CycleEvent
             if(bearLife == 0)
             {
                 bearDead.achived = true;
-                bear.gameObject.SetActive(false);
+                bear.anim.SetTrigger(onDeadAnimatorTrigger);
+            }
+            else
+            {
+                StartCoroutine(DeactiveBearCoroutine());
             }
         }
+    }
+    IEnumerator DeactiveBearCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        bear.gameObject.SetActive(false);
     }
     private void OnDisable()
     {
