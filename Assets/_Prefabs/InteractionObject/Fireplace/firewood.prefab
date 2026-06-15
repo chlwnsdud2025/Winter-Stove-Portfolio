@@ -250,3 +250,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FurnaceFirewood
   fuelAmount: 30
+  consumeWood: {fileID: 11400000, guid: efe6108953a52094d84cb16a822e180a, type: 2}
