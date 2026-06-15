@@ -186,6 +186,7 @@ MonoBehaviour:
   allSubtitlesPlayed: {fileID: 11400000, guid: 97fcce524defca548b7267e1a54bb77e, type: 2}
   subtitlePlayer: {fileID: 0}
   subtitleTerm: 2.5
+  radioAudio: {fileID: 8300000, guid: 40659a5cc4b15d24493190891c698bf4, type: 3}
 --- !u!54 &550226062125016623
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -399,6 +400,7 @@ MonoBehaviour:
   allSubtitlesPlayed: {fileID: 11400000, guid: 97fcce524defca548b7267e1a54bb77e, type: 2}
   subtitlePlayer: {fileID: 0}
   subtitleTerm: 2.5
+  radioAudio: {fileID: 0}
 --- !u!1001 &3427336075065788259
 PrefabInstance:
   m_ObjectHideFlags: 0

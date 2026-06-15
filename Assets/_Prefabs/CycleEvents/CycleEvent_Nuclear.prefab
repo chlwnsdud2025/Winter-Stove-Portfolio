@@ -60,6 +60,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 2555896067495846195, guid: 9aa816eeb8debba41a938cb1f499f021, type: 2}
     value: {fileID: 8950320757216883004}
+  - key: {fileID: -660482686408713032, guid: 9aa816eeb8debba41a938cb1f499f021, type: 2}
+    value: {fileID: 2610446636501477142}
   m_ExposedReferences:
     m_References:
     - 113a6f8cadbd75b469b3ba10ca4a574f: {fileID: 0}
@@ -609,12 +611,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3535507956950306897, guid: c58b5124316d6394da40c10a6b3c8179, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c58b5124316d6394da40c10a6b3c8179, type: 3}
+--- !u!82 &2610446636501477142 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3727285156156988869, guid: c58b5124316d6394da40c10a6b3c8179, type: 3}
+  m_PrefabInstance: {fileID: 1694428212720466643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8678029946736485802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8065207207214735225, guid: c58b5124316d6394da40c10a6b3c8179, type: 3}

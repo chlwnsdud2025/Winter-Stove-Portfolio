@@ -16,7 +16,6 @@ public class SoundManager : MonoBehaviour, ISoundManager
     [SerializeField] private AudioMixerGroup _bgmGroup;
     [SerializeField] private AudioMixerGroup _sfxGroup;
     int poolSize = 5;
-
     private Queue<AudioSource> sfx_pool = new();
 
     private AudioSource bgm_sourceA;

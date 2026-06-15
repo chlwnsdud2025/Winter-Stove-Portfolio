@@ -175,6 +175,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WateringCan
       objectReference: {fileID: 0}
+    - target: {fileID: 4559339980319087133, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 8375326682673895624, guid: ab05348193ee18b4faeada12a545dce0, type: 2}
+    - target: {fileID: 7908921343995744690, guid: 2e9fa134cc3eabc4ba02fdc0ff1c6486, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 8375326682673895624, guid: ab05348193ee18b4faeada12a545dce0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
