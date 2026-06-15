@@ -135,9 +135,21 @@ PrefabInstance:
       propertyPath: m_Parameters.widthMultiplier
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: 3074471628601745017, guid: 95a33e14d0163eb4287697f19289f15e, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 2147484193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053579577978487484, guid: 95a33e14d0163eb4287697f19289f15e, type: 3}
+      propertyPath: m_PhysicsLayerMask.m_Bits
+      value: 513
+      objectReference: {fileID: 0}
     - target: {fileID: 5033801203051696737, guid: 95a33e14d0163eb4287697f19289f15e, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456733348963664102, guid: 95a33e14d0163eb4287697f19289f15e, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 2147484193
       objectReference: {fileID: 0}
     - target: {fileID: 5895826684305351068, guid: 95a33e14d0163eb4287697f19289f15e, type: 3}
       propertyPath: m_IsActive
@@ -146,6 +158,10 @@ PrefabInstance:
     - target: {fileID: 6232745470614056090, guid: 95a33e14d0163eb4287697f19289f15e, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6436123941575367715, guid: 95a33e14d0163eb4287697f19289f15e, type: 3}
+      propertyPath: m_PhysicsLayerMask.m_Bits
+      value: 513
       objectReference: {fileID: 0}
     - target: {fileID: 9173983156334026967, guid: 95a33e14d0163eb4287697f19289f15e, type: 3}
       propertyPath: m_IsActive

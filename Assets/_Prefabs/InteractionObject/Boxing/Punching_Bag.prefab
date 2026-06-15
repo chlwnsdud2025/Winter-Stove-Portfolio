@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 1954844805055229947}
   - component: {fileID: 4294618211108533416}
   - component: {fileID: 2931694332801091342}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
