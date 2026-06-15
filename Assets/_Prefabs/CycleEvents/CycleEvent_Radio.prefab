@@ -69,6 +69,7 @@ MonoBehaviour:
   allSubtitlesPlayed: {fileID: 11400000, guid: 97fcce524defca548b7267e1a54bb77e, type: 2}
   subtitlePlayer: {fileID: 9086092607233339990}
   subtitleTerm: 2.5
+  radioAudio: {fileID: 8300000, guid: 40659a5cc4b15d24493190891c698bf4, type: 3}
 --- !u!1001 &5771198873215660740
 PrefabInstance:
   m_ObjectHideFlags: 0
