@@ -9,9 +9,9 @@ public class SettingsSO : ScriptableObject
     [SerializeField] private AudioMixer _mixer;
 
     [Header("Volume")]
-    [SerializeField, Range(0f, 1f)] private float _masterVolume = 1f;
-    [SerializeField, Range(0f, 1f)] private float _bgmVolume = 1f;
-    [SerializeField, Range(0f, 1f)] private float _sfxVolume = 1f;
+    [SerializeField, Range(0f, 1f)] private float _masterVolume = 0.3f;
+    [SerializeField, Range(0f, 1f)] private float _bgmVolume = 0.3f;
+    [SerializeField, Range(0f, 1f)] private float _sfxVolume = 0.3f;
 
     public event Action<float> OnMasterVolumeChanged;
     public event Action<float> OnBGMVolumeChanged;
@@ -67,8 +67,8 @@ public class SettingsSO : ScriptableObject
 
     public void Load()
     {
-        MasterVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
-        BGMVolume = PlayerPrefs.GetFloat("BGMVolume", 1f);
-        SFXVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        MasterVolume = PlayerPrefs.GetFloat("MasterVolume", 0.3f);
+        BGMVolume = PlayerPrefs.GetFloat("BGMVolume", 0.3f);
+        SFXVolume = PlayerPrefs.GetFloat("SFXVolume", 0.3f);
     }
 }
