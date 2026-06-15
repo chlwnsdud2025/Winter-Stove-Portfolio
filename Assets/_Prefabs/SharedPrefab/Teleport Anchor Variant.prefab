@@ -83,6 +83,7 @@ MonoBehaviour:
   teleportationProvider: {fileID: 0}
   xrOrigin: {fileID: 0}
   anchor: {fileID: 0}
+  nextAudio: {fileID: 8300000, guid: 178a3ffd7d0a73e4a9e4cf6ef7e3ee43, type: 3}
 --- !u!114 &7125809297954108392
 MonoBehaviour:
   m_ObjectHideFlags: 0
