@@ -9,33 +9,12 @@ public interface ISoundManager
     void PlaySFX(AudioClip clip);
     void PlaySFX(AudioClip clip, Vector3 position);
 }
-public enum SoundType
-{
-    Snowy,
-
-    Bear_Growling,
-    Card_Flipping,
-    Cat_AngryMeow,
-    Cat_Meow,
-    Clock_Ticking,
-    Dart_Sticks,
-    Gun_Shot,
-    Jenga_Drop,
-    Nuclear_Blowup,
-    Player_ChangeAvatar,
-    Quest_Completed,
-    Radio_Playing,
-    Sandbag_Punch,
-}
-
 public class SoundManager : MonoBehaviour, ISoundManager
 {
     static ISoundManager instance;
     public static ISoundManager Instance { get => instance; }
-    [SerializeField] private SoundEventChannel soundChannel;
     [SerializeField] private AudioMixerGroup _bgmGroup;
     [SerializeField] private AudioMixerGroup _sfxGroup;
-    [SerializeField] private Dictionary<SoundType, AudioClip> tracks;
     int poolSize = 5;
 
     private Queue<AudioSource> sfx_pool = new();
@@ -64,27 +43,6 @@ public class SoundManager : MonoBehaviour, ISoundManager
         {
             var src = CreateSource($"SFX_Group_{i}", _sfxGroup, false, false);
             sfx_pool.Enqueue(src);
-        }
-    }
-    private void OnEnable()
-    {
-        soundChannel.OnEventRaised -= HandleSoundRaised;
-        soundChannel.OnEventRaised += HandleSoundRaised;
-    }
-    private void OnDisable()
-    {
-        soundChannel.OnEventRaised -= HandleSoundRaised;
-    }
-    void HandleSoundRaised(Vector3 v, SoundType type)
-    {
-        if (tracks.ContainsKey(type) == false) return;
-        if(type == SoundType.Snowy)
-        {
-            PlayBGM(tracks[type]);
-        }
-        else
-        {
-            PlaySFX(tracks[type], v);
         }
     }
     public void PlayBGM(AudioClip clip, float fadeTime = 1f)
