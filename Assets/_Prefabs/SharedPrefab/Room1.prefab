@@ -1448,7 +1448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: -1372625422
-  m_CollectObjects: 0
+  m_CollectObjects: 2
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
@@ -1462,9 +1462,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.06666667
+  m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 836a96841349be44da963dd67d31151c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 57e429b8a7c48f74291739cb78139af2, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &7982709887393407615
 GameObject:
@@ -5467,11 +5467,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443854542128042430, guid: 9cf132163ef85714b94177e4d51d606b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 7443854542128042430, guid: 9cf132163ef85714b94177e4d51d606b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 296.1
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 7443854542128042430, guid: 9cf132163ef85714b94177e4d51d606b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5483,7 +5483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443854542128042430, guid: 9cf132163ef85714b94177e4d51d606b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.502
+      value: -2.391
       objectReference: {fileID: 0}
     - target: {fileID: 7443854542128042430, guid: 9cf132163ef85714b94177e4d51d606b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5503,11 +5503,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443854542128042430, guid: 9cf132163ef85714b94177e4d51d606b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5.332
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 7443854542128042430, guid: 9cf132163ef85714b94177e4d51d606b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.798
+      value: 4.05
       objectReference: {fileID: 0}
     - target: {fileID: 7443854542128042430, guid: 9cf132163ef85714b94177e4d51d606b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

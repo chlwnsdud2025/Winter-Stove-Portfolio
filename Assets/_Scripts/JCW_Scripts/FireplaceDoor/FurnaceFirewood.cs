@@ -12,7 +12,7 @@ public class FurnaceFirewood : MonoBehaviour
 {
     [Header("Firewood Settings")]
     [SerializeField] private float fuelAmount = 30f; // 이 장작이 추가하는 연료량(초)
-
+    [SerializeField] ConditionData consumeWood;
 
     public float FuelAmount => fuelAmount;
     public Action OnConsumed;
@@ -29,7 +29,8 @@ public class FurnaceFirewood : MonoBehaviour
     /// </summary>
     public void Consume()
     {
-        OnConsumed?.Invoke(); 
+        OnConsumed?.Invoke();
+        consumeWood.achived = true;
         _grabInteractable.enabled = false; // Grab 비활성화
         Destroy(gameObject, 0.1f);
     }

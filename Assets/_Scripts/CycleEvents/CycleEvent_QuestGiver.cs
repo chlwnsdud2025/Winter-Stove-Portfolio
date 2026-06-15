@@ -40,10 +40,13 @@ public class CycleEvent_QuestGiver : CycleEvent
             if (showedQuest[i] == null) continue;
             if (showedQuest[i].state == QuestStates.Running && showedQuest[i].condition.achived)
             {
-                RmvQuest(showedQuest[i]);
-                questDatas[i].state = QuestStates.Cleared;
-                SoundManager.Instance.PlaySFX(SFX_Completed);
+                SoundManager.Instance?.PlaySFX(SFX_Completed);
+                PopupManager.Instance?.Popup(showedQuest[i].text + " 완료!");
                 CycleEvent_Nuclear.Postpone();
+
+                cachedTmpros[i].gameObject.SetActive(false);
+                showedQuest[i].state = QuestStates.Cleared;
+                showedQuest[i] = null;
             }
         }
 
@@ -71,19 +74,6 @@ public class CycleEvent_QuestGiver : CycleEvent
                 showedQuest[i] = data;
                 cachedTmpros[i].tmpro.text = data.text;
                 cachedTmpros[i].gameObject.SetActive(true);
-                return true;
-            }
-        }
-        return false;
-    }
-    bool RmvQuest(QuestData data)
-    {
-        for (int i = 0; i < MAX_VIEWED_QUEST; i++)
-        {
-            if (showedQuest[i] != null && showedQuest[i] == data)
-            {
-                showedQuest[i] = null;
-                cachedTmpros[i].gameObject.SetActive(false);
                 return true;
             }
         }
