@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using System;
+
 
 /// <summary>
 /// 장작 오브젝트 — Grab 가능, 소켓에 투입 시 소비됨
@@ -11,7 +13,9 @@ public class FurnaceFirewood : MonoBehaviour
     [Header("Firewood Settings")]
     [SerializeField] private float fuelAmount = 30f; // 이 장작이 추가하는 연료량(초)
 
+
     public float FuelAmount => fuelAmount;
+    public Action OnConsumed;
 
     private XRGrabInteractable _grabInteractable;
 
@@ -25,6 +29,7 @@ public class FurnaceFirewood : MonoBehaviour
     /// </summary>
     public void Consume()
     {
+        OnConsumed?.Invoke(); 
         _grabInteractable.enabled = false; // Grab 비활성화
         Destroy(gameObject, 0.1f);
     }
