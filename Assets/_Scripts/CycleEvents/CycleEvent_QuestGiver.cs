@@ -42,7 +42,8 @@ public class CycleEvent_QuestGiver : CycleEvent
             {
                 RmvQuest(showedQuest[i]);
                 questDatas[i].state = QuestStates.Cleared;
-                SoundManager.Instance.PlaySFX(SFX_Completed);
+                SoundManager.Instance?.PlaySFX(SFX_Completed);
+                PopupManager.Instance?.Popup(questDatas[i].text + " 완료!");
                 CycleEvent_Nuclear.Postpone();
             }
         }
