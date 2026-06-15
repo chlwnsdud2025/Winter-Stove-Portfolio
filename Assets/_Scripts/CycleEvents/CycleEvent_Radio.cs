@@ -14,6 +14,7 @@ public class CycleEvent_Radio : CycleEvent
     [SerializeField] ConditionData allSubtitlesPlayed;
     [SerializeField] SubtitlePlayer subtitlePlayer;
     [SerializeField] float subtitleTerm = 2.5f;
+    public AudioClip radioAudio;
 
     // 자막 뭉치 인덱스
     int curSubtitleEntryIndex = 0;
@@ -25,6 +26,8 @@ public class CycleEvent_Radio : CycleEvent
     protected override void Raise()
     {
         if (allSubtitlesPlayed.achived) return;
+
+        SoundManager.Instance.PlaySFX(radioAudio, transform.position);
 
         IsPlaying = true;
         lastT = Time.time;
