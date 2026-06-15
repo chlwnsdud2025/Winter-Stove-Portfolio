@@ -268,4 +268,4 @@ MonoBehaviour:
   SFX_Completed: {fileID: 8300000, guid: 14f8f55970faf384f861f4be90d365bb, type: 3}
   parent: {fileID: 887106616404977153}
   prefab: {fileID: 2217142297452951643, guid: c645daaab7a4a0948ae852ba6c68af35, type: 3}
-  MAX_VIEWED_QUEST: 6
+  MAX_VIEWED_QUEST: 7

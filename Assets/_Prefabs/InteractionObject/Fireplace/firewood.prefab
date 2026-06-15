@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 6022210841217643504}
   - component: {fileID: 4835796187075662214}
   - component: {fileID: 1912550615141665076}
-  - component: {fileID: 2080656271441973926}
   m_Layer: 0
   m_Name: firewood
   m_TagString: Untagged
@@ -237,17 +236,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FirewoodDispenser
   firewoodPrefab: {fileID: 4160743703507169564, guid: 42a7336dd29df914b82e5e257ea62160, type: 3}
   spawnPoint: {fileID: 0}
---- !u!114 &2080656271441973926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3289076076179665064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c978f128fc766e429a4bb7eb29ea314, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FurnaceFirewood
-  fuelAmount: 30
-  consumeWood: {fileID: 11400000, guid: efe6108953a52094d84cb16a822e180a, type: 2}
