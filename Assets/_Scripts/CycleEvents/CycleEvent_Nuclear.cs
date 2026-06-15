@@ -22,10 +22,6 @@ public class CycleEvent_Nuclear : CycleEvent
     {
         GetComponent<PlayableDirector>().Play();
     }
-    protected override void Update()
-    {
-        base.Update();
-    }
     public static void Postpone()
     {
         if (instance != null)

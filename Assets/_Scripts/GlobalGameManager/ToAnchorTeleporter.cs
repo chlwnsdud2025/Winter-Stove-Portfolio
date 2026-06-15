@@ -7,8 +7,10 @@ public class ToAnchorTeleporter : MonoBehaviour
     [SerializeField] TeleportationProvider teleportationProvider;
     [SerializeField] private GameObject xrOrigin; // Your main XR Origin (XR Rig) object
     [SerializeField] TeleportationAnchor anchor;
+    [SerializeField] AudioClip nextAudio;
     public void Teleport()
     {
+        SoundManager.Instance.PlayBGM(nextAudio, 1.5f);
         TeleportRequest req = new TeleportRequest
         {
             destinationPosition = anchor.teleportAnchorTransform.position,

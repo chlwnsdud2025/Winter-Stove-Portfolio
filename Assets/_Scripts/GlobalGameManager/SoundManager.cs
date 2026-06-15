@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour, ISoundManager
 {
     static ISoundManager instance;
     public static ISoundManager Instance { get => instance; }
+    [SerializeField] private AudioClip initialBGM;
     [SerializeField] private AudioMixerGroup _bgmGroup;
     [SerializeField] private AudioMixerGroup _sfxGroup;
     int poolSize = 5;
@@ -43,6 +44,8 @@ public class SoundManager : MonoBehaviour, ISoundManager
             var src = CreateSource($"SFX_Group_{i}", _sfxGroup, false, false);
             sfx_pool.Enqueue(src);
         }
+
+        PlayBGM(initialBGM);
     }
     public void PlayBGM(AudioClip clip, float fadeTime = 1f)
     {

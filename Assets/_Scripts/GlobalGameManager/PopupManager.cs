@@ -52,7 +52,7 @@ public class PopupManager : MonoBehaviour, IPopupManager
 
         if(Time.time - lastT < duration)
         {
-            var val = Mathf.Clamp01((Time.time - lastT) / duration);
+            var val = Mathf.Clamp01(1f - (Time.time - lastT) / duration);
             tmpro.color = new Color(tmpro.color.r, tmpro.color.g, tmpro.color.b, val);
             image.color = new Color(image.color.r, image.color.g, image.color.b, val);
         }
