@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CycleEventData
   id: 0
   elapseTimeNeed: 60
-  termTimeNeed: 30
-  rate: 1
+  termTimeNeed: 8
+  rate: 0.6
   requires:
-  - {fileID: 11400000, guid: 0dee09371a0136b4da3a67b3b156a4e3, type: 2}
+  - {fileID: 11400000, guid: 97fef43256baa4a4bba647c52580fcec, type: 2}

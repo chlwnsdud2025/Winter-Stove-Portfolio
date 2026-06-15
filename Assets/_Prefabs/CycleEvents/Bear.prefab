@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4043781778308910244}
   - component: {fileID: 7879568472531585933}
+  - component: {fileID: 1659427084669082810}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Untagged
@@ -45,7 +46,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0af136dabdf0f96448008420f27c1423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bear
-  anim: {fileID: 8713437785490636846}
+  anim: {fileID: 1659427084669082810}
+--- !u!95 &1659427084669082810
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124522227995204586}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 7645afd8047522a448e285b5bda7bf88, type: 3}
+  m_Controller: {fileID: 9100000, guid: 878f67cb14a90114490a50543e554842, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2992303482983316927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118,7 +141,8 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 878f67cb14a90114490a50543e554842, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 7645afd8047522a448e285b5bda7bf88, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -126,10 +150,5 @@ PrefabInstance:
 --- !u!4 &3318156031483124308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7645afd8047522a448e285b5bda7bf88, type: 3}
-  m_PrefabInstance: {fileID: 2992303482983316927}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &8713437785490636846 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 7645afd8047522a448e285b5bda7bf88, type: 3}
   m_PrefabInstance: {fileID: 2992303482983316927}
   m_PrefabAsset: {fileID: 0}
