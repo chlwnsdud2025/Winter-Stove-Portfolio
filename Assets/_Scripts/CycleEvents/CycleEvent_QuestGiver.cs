@@ -8,6 +8,10 @@ public class CycleEvent_QuestGiver : CycleEvent
     [Header("퀘스트 데이터")]
     [SerializeField] QuestData[] questDatas;
 
+    [Header("사운드")]
+    [SerializeField] AudioClip SFX_Accepted;
+    [SerializeField] AudioClip SFX_Completed;
+
     [Header("UI 요소")]
     [SerializeField] Transform parent;
     [SerializeField] GameObject prefab;
@@ -38,19 +42,25 @@ public class CycleEvent_QuestGiver : CycleEvent
             {
                 RmvQuest(showedQuest[i]);
                 questDatas[i].state = QuestStates.Cleared;
+                SoundManager.Instance.PlaySFX(SFX_Completed);
                 CycleEvent_Nuclear.Postpone();
             }
         }
 
+        // 한 번에 사운드 여러개 재생되는거 방지
+        bool questAcceptedFlag = false;
         // 새 퀘스트 추가
         for (int i = 0; i < questDatas.Length; i++)
         {
             if(questDatas[i].state == QuestStates.Sleep && IsPreQuestCleaered(questDatas[i]))
             {
                 AddQuest(questDatas[i]);
+                questAcceptedFlag = true;
                 questDatas[i].state = QuestStates.Running;
             }
         }
+        if(questAcceptedFlag)
+            SoundManager.Instance.PlaySFX(SFX_Accepted);
     }
     bool AddQuest(QuestData data)
     {
