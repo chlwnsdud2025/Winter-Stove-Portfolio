@@ -22,6 +22,7 @@ public class CycleEvent_EmergeBear : CycleEvent
         {
             bear.gameObject.SetActive(true);
             bear.anim.ResetTrigger(onShotAnimatorTrigger);
+            SoundManager.Instance.PlaySFX(bear_Growling, bear.transform.position);
             IsPlaying = true;
             gunShotEvent.OnEventRaised -= HandleGunShotted;
             gunShotEvent.OnEventRaised += HandleGunShotted;
@@ -29,7 +30,6 @@ public class CycleEvent_EmergeBear : CycleEvent
     }
     void HandleGunShotted()
     {
-        SoundManager.Instance.PlaySFX(bear_Growling, bear.transform.position);
         bear.anim.SetTrigger(onShotAnimatorTrigger);
         gunShotEvent.OnEventRaised -= HandleGunShotted;
         IsPlaying = false;
