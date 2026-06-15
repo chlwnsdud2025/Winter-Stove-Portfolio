@@ -28,8 +28,8 @@ public class FurnaceManager : MonoBehaviour
 
     private void Start()
     {
-        _currentFuel = initialFuel;
-        SetFireState(_currentFuel > 0);
+        _currentFuel = 0f; // 초기 연료 0으로
+        SetFireState(false); // 불 꺼진 상태로 시작
     }
 
     private void Update()
