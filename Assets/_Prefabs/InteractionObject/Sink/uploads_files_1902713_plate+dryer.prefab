@@ -2689,6 +2689,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SinkManager
   targetPlateCount: 5
+  sinkCondition: {fileID: 11400000, guid: 215b8a15a14746f4482d7359ae4bf408, type: 2}
+  sinkchannel: {fileID: 11400000, guid: a8dc54add8d5fba4b90f151f74689f64, type: 2}
 --- !u!1 &9174880416815123353
 GameObject:
   m_ObjectHideFlags: 0
