@@ -18,6 +18,7 @@ public class CycleEvent_QuestGiver : CycleEvent
     [SerializeField] int MAX_VIEWED_QUEST;
     QuestUIElement[] cachedTmpros;
     QuestData[] showedQuest;
+    int curQuestNum;
     private void Awake()
     {
         showedQuest = new QuestData[MAX_VIEWED_QUEST];
@@ -43,6 +44,7 @@ public class CycleEvent_QuestGiver : CycleEvent
                 SoundManager.Instance?.PlaySFX(SFX_Completed);
                 PopupManager.Instance?.Popup(showedQuest[i].text + " 완료!");
                 CycleEvent_Nuclear.Postpone();
+                curQuestNum--;
 
                 cachedTmpros[i].gameObject.SetActive(false);
                 showedQuest[i].state = QuestStates.Cleared;
@@ -53,10 +55,11 @@ public class CycleEvent_QuestGiver : CycleEvent
         // 한 번에 사운드 여러개 재생되는거 방지
         bool questAcceptedFlag = false;
         // 새 퀘스트 추가
-        for (int i = 0; i < questDatas.Length; i++)
+        for (int i = 0; i < questDatas.Length && curQuestNum < MAX_VIEWED_QUEST; i++)
         {
             if(questDatas[i].state == QuestStates.Sleep && IsPreQuestCleaered(questDatas[i]))
             {
+                curQuestNum++;
                 AddQuest(questDatas[i]);
                 questAcceptedFlag = true;
                 questDatas[i].state = QuestStates.Running;
