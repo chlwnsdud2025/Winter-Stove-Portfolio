@@ -48,7 +48,7 @@ MonoBehaviour:
   popup: {fileID: 3587583502082294490}
   image: {fileID: 3926267018466930190}
   tmpro: {fileID: 6743129891675347692}
-  duration: 3
+  duration: 5
 --- !u!1001 &1506433151304276497
 PrefabInstance:
   m_ObjectHideFlags: 0
