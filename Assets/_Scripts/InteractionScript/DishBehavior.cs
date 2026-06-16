@@ -17,7 +17,6 @@ public class DishBehavior : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        Debug.Log($"[충돌 감지] 부딪힌 물체: {collision.gameObject.name} / 태그: {collision.gameObject.tag}");
 
         if (isClean) return;
 
