@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 [RequireComponent(typeof(Rigidbody))]
 public class DartBehavior : MonoBehaviour
 {
+    [SerializeField] AudioClip dartAudio;
     [Header("다트 판정 세팅")]
     public Transform dartTip; // 다트 끝부분(뾰족한 곳)에 넣을 빈 오브젝트
     public float hitCheckRadius = 0.01f; // 판정 반경 (1cm 정도로 아주 작게)
@@ -34,6 +35,8 @@ public class DartBehavior : MonoBehaviour
 
         rb.isKinematic = false;
         rb.useGravity = true;
+
+        SoundManager.Instance?.PlaySFX(dartAudio);
     }
 
     private void OnGrab(SelectEnterEventArgs args)
