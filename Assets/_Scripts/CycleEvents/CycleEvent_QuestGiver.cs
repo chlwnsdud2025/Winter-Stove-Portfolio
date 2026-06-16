@@ -19,10 +19,13 @@ public class CycleEvent_QuestGiver : CycleEvent
     QuestUIElement[] cachedTmpros;
     QuestData[] showedQuest;
     int curQuestNum;
+    int clearedNum;
     private void Awake()
     {
         showedQuest = new QuestData[MAX_VIEWED_QUEST];
         cachedTmpros = new QuestUIElement[MAX_VIEWED_QUEST];
+        curQuestNum = 0;
+        clearedNum = 0;
     }
     private void Start()
     {
@@ -42,13 +45,22 @@ public class CycleEvent_QuestGiver : CycleEvent
             if (showedQuest[i].state == QuestStates.Running && showedQuest[i].condition.achived)
             {
                 SoundManager.Instance?.PlaySFX(SFX_Completed);
-                PopupManager.Instance?.Popup(showedQuest[i].text + " 완료!");
                 CycleEvent_Nuclear.Postpone();
                 curQuestNum--;
 
                 cachedTmpros[i].gameObject.SetActive(false);
                 showedQuest[i].state = QuestStates.Cleared;
                 showedQuest[i] = null;
+                clearedNum++;
+                if(clearedNum == questDatas.Length)
+                {
+                    PopupManager.Instance?.Popup("모든 퀘스트 클리어!");
+                    CycleEvent_Nuclear.Disable();
+                }
+                else
+                {
+                    PopupManager.Instance?.Popup(showedQuest[i].text + " 완료!");
+                }
             }
         }
 

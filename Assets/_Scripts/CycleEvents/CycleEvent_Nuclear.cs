@@ -6,7 +6,7 @@ public class CycleEvent_Nuclear : CycleEvent
     static CycleEvent_Nuclear instance;
     [SerializeField] Clock clock;
     const int POSTPONE_AMOUNT = 60;
-
+    bool disabled;
     private void Awake()
     {
         if(instance != null)
@@ -20,7 +20,13 @@ public class CycleEvent_Nuclear : CycleEvent
     }
     protected override void Raise()
     {
+        if (disabled) return;
         GetComponent<PlayableDirector>().Play();
+    }
+    public static void Disable()
+    {
+        instance.clock.Stop = true;
+        instance.disabled = true;
     }
     public static void Postpone()
     {
