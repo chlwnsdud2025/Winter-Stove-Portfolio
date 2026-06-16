@@ -4,6 +4,8 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent), typeof(Animator))]
 public class CatController : MonoBehaviour
 {
+    [SerializeField] AudioClip meowAudio;
+    [SerializeField] AudioClip angryMeowAudio;
     [Header("Components")]
     public NavMeshAgent agent;
     public Animator animator;
@@ -83,6 +85,7 @@ public class CatController : MonoBehaviour
         // 고양이가 들려있는 상태가 아닐 때만 애교를 부립니다.
         if (stateMachine.CurrentState != grabbedState)
         {
+            SoundManager.Instance?.PlaySFX(meowAudio);
             stateMachine.ChangeState(pettedState);
         }
     }
@@ -90,6 +93,7 @@ public class CatController : MonoBehaviour
     // 고양이를 집어 들었을 때 (XR Grab Interactable의 Select Entered에 연결)
     public void OnGrabEntered()
     {
+        SoundManager.Instance?.PlaySFX(angryMeowAudio, transform.position);
         // 잡히는 순간, 현재 상태가 SleepState였다면 true로 기록해 둡니다.
         // (SleepState 스크립트를 구현하셨다는 가정 하에 작성)
         wasSleepingBeforeGrab = (stateMachine.CurrentState == sleepState);

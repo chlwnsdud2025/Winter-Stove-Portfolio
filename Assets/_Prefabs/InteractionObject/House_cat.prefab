@@ -1340,6 +1340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c31cff7bfc4be4faaa4305742dcff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CatController
+  meowAudio: {fileID: 8300000, guid: 612e5f9cd4fa96e4fbd76294e976fd1c, type: 3}
+  angryMeowAudio: {fileID: 8300000, guid: b6d30130372e5d04dbd15fffe4e31e4f, type: 3}
   agent: {fileID: 6345185524147401088}
   animator: {fileID: 1751192556646940407}
   walkRadius: 5
