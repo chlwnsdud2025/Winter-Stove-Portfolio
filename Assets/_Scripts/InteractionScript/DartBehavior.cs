@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 [RequireComponent(typeof(Rigidbody))]
 public class DartBehavior : MonoBehaviour
 {
+    [SerializeField] AudioClip dartAudio;
     [Header("다트 판정 세팅")]
     public Transform dartTip; // 다트 끝부분(뾰족한 곳)에 넣을 빈 오브젝트
     public float hitCheckRadius = 0.01f; // 판정 반경 (1cm 정도로 아주 작게)
@@ -71,6 +72,8 @@ public class DartBehavior : MonoBehaviour
                         transform.position = hit.point;
                     }
 
+
+                    SoundManager.Instance?.PlaySFX(dartAudio);
                     // 위치를 맞춘 후 멈춤 및 점수 판독을 실행합니다.
                     StickToBoard();
                     return;
