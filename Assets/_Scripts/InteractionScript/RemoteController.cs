@@ -29,12 +29,10 @@ public class RemoteController : MonoBehaviour
             {
                 // 4. TV를 맞췄다면 전원 토글 함수 실행!
                 tv.TogglePower();
-                Debug.Log("[리모컨] TV에 신호를 보냈습니다!");
             }
             else
             {
                 // TV가 아닌 다른 벽이나 물체를 맞췄을 때
-                Debug.Log($"[리모컨] 빗나감! 맞춘 물체: {hit.collider.name}");
             }
         }
     }

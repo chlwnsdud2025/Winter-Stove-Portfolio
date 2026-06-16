@@ -45,6 +45,6 @@ public class GunBehavior : MonoBehaviour
             Destroy(flashInstance, destroyDelay);
         }
 
-        Debug.Log("탕! 프리팹 생성 방식으로 총이 발사되었습니다.");
+        Debug.Log("탕! 총이 발사되었습니다.");
     }
 }

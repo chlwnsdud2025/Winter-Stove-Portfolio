@@ -11,6 +11,7 @@ TagManager:
   - JengaZone
   - TrashCanZone
   - FlowerPot
+  - Sponge
   layers:
   - Default
   - TransparentFX
@@ -43,7 +44,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Dish
   m_SortingLayers:
   - name: Default
     uniqueID: 0
