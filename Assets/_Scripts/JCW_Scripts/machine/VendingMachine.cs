@@ -12,17 +12,14 @@ public class VendingMachine : MonoBehaviour
     [SerializeField] private Transform spawnPoint; // 자판기 하단 출구 위치
 
     [Header("Sound")]
-    [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip coinInsertClip;
-    [SerializeField] private AudioClip dispenseClip;
 
     /// <summary>
     /// VendingMachineSlot에서 호출
     /// </summary>
     public void InsertCoin()
     {
-        if (coinInsertClip != null)
-            audioSource.PlayOneShot(coinInsertClip);
+        SoundManager.Instance?.PlaySFX(coinInsertClip, transform.position);
 
         // 랜덤 우유병 배출
         int index = Random.Range(0, milkBottlePrefabs.Length);
@@ -37,9 +34,5 @@ public class VendingMachine : MonoBehaviour
         Rigidbody rb = bottle.GetComponent<Rigidbody>();
         if (rb != null)
             rb.AddForce(spawnPoint.forward * 2f + Vector3.up * 1f, ForceMode.Impulse);
-
-   
-        if (dispenseClip != null)
-            audioSource.PlayOneShot(dispenseClip);
     }
 }

@@ -289,6 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d01d571633500b4a9bacc1b6933bc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DartBehavior
+  dartAudio: {fileID: 8300000, guid: 3b416e691f56ec44ebed5a4b6fd3aeea, type: 3}
   dartTip: {fileID: 8036799952091877462}
   hitCheckRadius: 0.01
   raycastrength: 0.1

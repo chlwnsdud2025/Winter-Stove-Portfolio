@@ -518,6 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5c1029067de404995fb9ad619502fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PunchingBag
+  punchAudio: {fileID: 8300000, guid: e37cead25f1255b4281bf09bf743ea4f, type: 3}
   scoreMultiplier: 100
   minimumImpact: 2
   hitCooldown: 0.5

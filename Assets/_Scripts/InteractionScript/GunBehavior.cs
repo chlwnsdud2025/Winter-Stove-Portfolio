@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 [RequireComponent(typeof(XRGrabInteractable))]
 public class GunBehavior : MonoBehaviour
 {
+    [SerializeField] AudioClip gunShotAudio;
     private XRGrabInteractable grabInteractable;
 
     public VoidEventChannel GunshotChannel;
@@ -33,13 +34,13 @@ public class GunBehavior : MonoBehaviour
         // 프리팹과 위치가 모두 지정되어 있을 때만 실행
         if (muzzleFlashPrefab != null && firePoint != null)
         {
+            SoundManager.Instance?.PlaySFX(gunShotAudio, transform.position);
             // 1. 지정된 FirePoint의 위치와 회전값으로 이펙트 프리팹 동적 생성
             // (파티클 프리팹에 'Play On Awake'가 켜져 있으면 생성되자마자 바로 불꽃이 터집니다)
             GameObject flashInstance = Instantiate(muzzleFlashPrefab, firePoint.position, firePoint.rotation);
 
             GunshotChannel.RaiseEvent();
             //gunshot.achived = true;
-
             // 2. [중요] 프리팹 방식의 필수 처리! 
             // 찌꺼기 오브젝트가 Hierarchy에 계속 쌓여 렉이 걸리지 않도록 일정 시간 뒤 자동으로 삭제합니다.
             Destroy(flashInstance, destroyDelay);

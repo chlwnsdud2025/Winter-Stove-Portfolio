@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6098459000686840079}
   - component: {fileID: 3338127337879544109}
   - component: {fileID: -4713077026754225471}
+  - component: {fileID: 2617558017208986036}
   m_Layer: 0
   m_Name: Jenga_Piece
   m_TagString: Untagged
@@ -135,7 +136,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2617558017208986036}
+        m_TargetAssemblyTypeName: AudioClipPlayer, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -239,6 +252,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f52c7424481cf446937af0184de7b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JengaBlock
+--- !u!114 &2617558017208986036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790386121309297716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b3338f90a06994ca3999c10132d9a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioClipPlayer
+  clip: {fileID: 8300000, guid: 0ebb2732ee1032c479f9834e7f5a4ffa, type: 3}
 --- !u!1 &3921750745684431662
 GameObject:
   m_ObjectHideFlags: 0
