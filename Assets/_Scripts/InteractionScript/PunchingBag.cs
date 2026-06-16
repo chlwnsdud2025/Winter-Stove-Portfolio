@@ -3,6 +3,8 @@ using TMPro;
 
 public class PunchingBag : MonoBehaviour
 {
+    [SerializeField] AudioClip punchAudio;
+
     [Header("점수 세팅")]
     public float scoreMultiplier = 100f;
     public float minimumImpact = 2.0f; // 이 수치가 범인일 수 있습니다.
@@ -27,7 +29,7 @@ public class PunchingBag : MonoBehaviour
         if (collision.collider.CompareTag("Glove"))
         {
             float impactForce = collision.relativeVelocity.magnitude;
-
+            SoundManager.Instance?.PlaySFX(punchAudio, transform.position);
 
             if (impactForce >= minimumImpact)
             {

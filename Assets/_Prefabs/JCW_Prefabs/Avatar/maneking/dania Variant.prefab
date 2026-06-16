@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6a84ad062a6f245bde3ef1d352e5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvatarSelector
+  changeAvatarAudio: {fileID: 8300000, guid: d7ad27af352603a4e98628af1056ed62, type: 3}
   avatarPrefab: {fileID: 5364530377445806012, guid: 389b51458dd6cfa4a8ae53aeeeafe680, type: 3}
 --- !u!114 &5390001370720215800
 MonoBehaviour:
