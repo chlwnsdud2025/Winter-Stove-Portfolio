@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8044b6daa6734994ba7f5b692249e9b2, type: 3}
   m_Name: PlantWithering
   m_EditorClassIdentifier: Assembly-CSharp::CycleEventData
-  id: 
+  id: "\uAF43 \uC2DC\uB4E6"
   elapseTimeNeed: 10
   termTimeNeed: 10
-  rate: 1
+  rate: 0.2
   requires: []
