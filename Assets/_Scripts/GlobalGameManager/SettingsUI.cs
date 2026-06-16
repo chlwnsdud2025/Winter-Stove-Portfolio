@@ -50,12 +50,18 @@ public class SettingsUI : MonoBehaviour
     }
     private void Update()
     {
-        for (int i = 0; i < cycles.Length; i++)
-        {
-            var remained = cycles[i].GetRemained();
-            cycleUis[i].remainedText.text = Mathf.FloorToInt(remained).ToString();
-            cycleUis[i].remainedSlider.SetValueWithoutNotify(remained / (cycles[i].IsFirstEvent ? cycles[i].data.elapseTimeNeed : cycles[i].data.termTimeNeed));
-        }
+        if(curtap == 1)
+            for (int i = 0; i < cycles.Length; i++)
+            {
+                if (Time.time - cycles[i].StartTime < .2f)
+                    cycleUis[i].remainedText.text = "대기 중";
+                else
+                {
+                    var remained = cycles[i].GetRemained();
+                    cycleUis[i].remainedText.text = Mathf.FloorToInt(remained).ToString();
+                    cycleUis[i].remainedSlider.SetValueWithoutNotify(remained / (cycles[i].IsFirstEvent ? cycles[i].data.elapseTimeNeed : cycles[i].data.termTimeNeed));
+                }
+            }
     }
     void InitCycleEvents()
     {
@@ -68,12 +74,6 @@ public class SettingsUI : MonoBehaviour
             cycleUis[i].remainedText.text = Mathf.FloorToInt(cycles[i].GetRemained()).ToString();
             cycleUis[i].rate.text = Mathf.FloorToInt(cycles[i].data.rate*100).ToString();
             cycleUis[i].condition.text = cycles[i].data.requires.Length > 0 ? "있음" : "없음";
-            int captured = i;
-            cycleUis[i].remainedSlider.onValueChanged.AddListener((v) =>
-            {
-                cycleUis[captured].remainedText.text = v.ToString();
-                cycles[captured].SetRemained(v);
-            });
         }
     }
     public void OnApplyButton() => _settings.Save();
