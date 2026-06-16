@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8044b6daa6734994ba7f5b692249e9b2, type: 3}
   m_Name: DayCycle
   m_EditorClassIdentifier: Assembly-CSharp::CycleEventData
-  id: 
-  elapseTimeNeed: 7
-  termTimeNeed: 7
+  id: "\uB0AE \uBC24 \uC804\uD658"
+  elapseTimeNeed: 120
+  termTimeNeed: 120
   rate: 1
   requires: []

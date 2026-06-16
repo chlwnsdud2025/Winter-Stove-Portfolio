@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8044b6daa6734994ba7f5b692249e9b2, type: 3}
   m_Name: BearEmerge
   m_EditorClassIdentifier: Assembly-CSharp::CycleEventData
-  id: 0
+  id: "\uACF0 \uB4F1\uC7A5"
   elapseTimeNeed: 60
   termTimeNeed: 8
   rate: 0.6
