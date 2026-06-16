@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8044b6daa6734994ba7f5b692249e9b2, type: 3}
   m_Name: NuclearCountdown
   m_EditorClassIdentifier: Assembly-CSharp::CycleEventData
-  id: 
+  id: "\uD575 \uCE74\uC6B4\uD2B8 \uB2E4\uC6B4"
   elapseTimeNeed: 600
   termTimeNeed: 1e+12
   rate: 1

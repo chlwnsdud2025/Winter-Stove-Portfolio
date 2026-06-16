@@ -10,6 +10,8 @@ public abstract class CycleEvent : MonoBehaviour
     public bool IsFirstEvent { get; protected set; }
 
     private float postponeAmount = 0f;
+    public float SetRemained(float value) => postponeAmount = value - (IsFirstEvent ? data.elapseTimeNeed : data.termTimeNeed) + (Time.time - StartTime);
+    public float GetRemained() => ((IsFirstEvent ? data.elapseTimeNeed : data.termTimeNeed) + postponeAmount) - (Time.time - StartTime);
     protected void Postpone(float value) => postponeAmount += value;
     protected abstract void Raise();
     
