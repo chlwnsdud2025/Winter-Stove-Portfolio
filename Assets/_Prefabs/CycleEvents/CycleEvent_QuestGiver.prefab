@@ -224,7 +224,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4103015682548658170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +264,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 57fb00c0c7053b941897e27a4a4b8968, type: 2}
   - {fileID: 11400000, guid: 82c0e760d1d58d9419b67c23c5621278, type: 2}
   - {fileID: 11400000, guid: bc8f5f24c4a48e543b1f7e3431afa594, type: 2}
+  - {fileID: 11400000, guid: 2e6ff3477f425af469b9eb846cd13076, type: 2}
   SFX_Accepted: {fileID: 8300000, guid: 81d81255c9f8d6945a423242b80c0ae7, type: 3}
   SFX_Completed: {fileID: 8300000, guid: 14f8f55970faf384f861f4be90d365bb, type: 3}
   parent: {fileID: 887106616404977153}

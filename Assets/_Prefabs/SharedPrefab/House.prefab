@@ -487,6 +487,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2640301876499349002}
     m_Modifications:
+    - target: {fileID: 1332891444214249320, guid: 9dde5a10b4f48574bb1b65de395d3317, type: 3}
+      propertyPath: m_PhysicsLayerMask.m_Bits
+      value: 2147484161
+      objectReference: {fileID: 0}
     - target: {fileID: 6699583529945777509, guid: 9dde5a10b4f48574bb1b65de395d3317, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.834
@@ -530,6 +534,10 @@ PrefabInstance:
     - target: {fileID: 6699583529945777510, guid: 9dde5a10b4f48574bb1b65de395d3317, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8318113383977003511, guid: 9dde5a10b4f48574bb1b65de395d3317, type: 3}
+      propertyPath: m_PhysicsLayerMask.m_Bits
+      value: 2147484161
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
