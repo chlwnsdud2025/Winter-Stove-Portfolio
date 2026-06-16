@@ -35,8 +35,6 @@ public class DartBehavior : MonoBehaviour
 
         rb.isKinematic = false;
         rb.useGravity = true;
-
-        SoundManager.Instance?.PlaySFX(dartAudio);
     }
 
     private void OnGrab(SelectEnterEventArgs args)
@@ -74,6 +72,8 @@ public class DartBehavior : MonoBehaviour
                         transform.position = hit.point;
                     }
 
+
+                    SoundManager.Instance?.PlaySFX(dartAudio);
                     // 위치를 맞춘 후 멈춤 및 점수 판독을 실행합니다.
                     StickToBoard();
                     return;
