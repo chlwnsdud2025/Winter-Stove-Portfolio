@@ -62,5 +62,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9416cb1932cd43b49ba9732624d72db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrunkEffectController
-  wobbleSpeed: 2
-  wobbleIntensity: 0.3
+  wobbleSpeed: 1
+  wobbleIntensity: 0.45
