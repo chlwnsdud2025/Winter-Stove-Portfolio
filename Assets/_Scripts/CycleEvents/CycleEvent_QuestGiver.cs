@@ -50,7 +50,6 @@ public class CycleEvent_QuestGiver : CycleEvent
 
                 cachedTmpros[i].gameObject.SetActive(false);
                 showedQuest[i].state = QuestStates.Cleared;
-                showedQuest[i] = null;
                 clearedNum++;
                 if(clearedNum == questDatas.Length)
                 {
@@ -61,6 +60,7 @@ public class CycleEvent_QuestGiver : CycleEvent
                 {
                     PopupManager.Instance?.Popup(showedQuest[i].text + " 완료!");
                 }
+                showedQuest[i] = null;
             }
         }
 
