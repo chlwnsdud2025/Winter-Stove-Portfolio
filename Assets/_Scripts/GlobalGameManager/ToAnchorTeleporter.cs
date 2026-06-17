@@ -11,16 +11,18 @@ public class ToAnchorTeleporter : MonoBehaviour
     public void Teleport()
     {
         SoundManager.Instance.PlayBGM(nextAudio, 1.5f);
-        TeleportRequest req = new TeleportRequest
-        {
-            destinationPosition = anchor.teleportAnchorTransform.position,
-            destinationRotation = anchor.teleportAnchorTransform.rotation
-        };
+        xrOrigin.transform.position = anchor.teleportAnchorTransform.position;
+        xrOrigin.transform.rotation = anchor.teleportAnchorTransform.rotation;
+        //TeleportRequest req = new TeleportRequest
+        //{
+        //    destinationPosition = anchor.teleportAnchorTransform.position,
+        //    destinationRotation = anchor.teleportAnchorTransform.rotation
+        //};
 
-        teleportationProvider.QueueTeleportRequest(req);
-        // 4. Adjust the orientation if Match Orientation rules require it
-        MatchOrientation orientationMode = anchor.matchOrientation;
-        ApplyOrientation(anchor.teleportAnchorTransform, orientationMode);
+        //teleportationProvider.QueueTeleportRequest(req);
+        //// 4. Adjust the orientation if Match Orientation rules require it
+        //MatchOrientation orientationMode = anchor.matchOrientation;
+        //ApplyOrientation(anchor.teleportAnchorTransform, orientationMode);
     }
     private void ApplyOrientation(Transform targetTransform, MatchOrientation mode)
     {
