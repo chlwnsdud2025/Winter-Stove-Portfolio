@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc2c4d767767164ba85e1af42263e83, type: 3}
   m_Name: Quest_Clean_Dish_5Count
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  text: "\uC811\uC2DC\uB97C \uB2E6\uC544\uC11C \uC815\uB9AC!"
+  text: "\uC811\uC2DC\uB97C \uB2E6\uC544\uC11C \uC815\uB9AC\uD558\uC138\uC694!"
   condition: {fileID: 11400000, guid: 215b8a15a14746f4482d7359ae4bf408, type: 2}
   preQuests: []
