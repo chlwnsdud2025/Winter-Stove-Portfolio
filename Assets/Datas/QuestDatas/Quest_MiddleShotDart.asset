@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc2c4d767767164ba85e1af42263e83, type: 3}
   m_Name: Quest_MiddleShotDart
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  text: Hitting the center!!(Dart)
+  text: "\uB2E4\uD2B8 \uC911\uC559 \uB9DE\uCD94\uAE30!"
   condition: {fileID: 11400000, guid: 116f3e36da87c1748a7251384e538ce1, type: 2}
   preQuests: []

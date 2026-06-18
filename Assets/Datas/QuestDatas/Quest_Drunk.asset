@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc2c4d767767164ba85e1af42263e83, type: 3}
   m_Name: Quest_Drunk
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  text: "\uC220 \uCDE8\uD558\uAE30!!"
+  text: "\uC220\uC5D0 \uCDE8\uD558\uC138\uC694!"
   condition: {fileID: 11400000, guid: bf17bf078b6f85044b2c18e7efd493bc, type: 2}
   preQuests: []

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc2c4d767767164ba85e1af42263e83, type: 3}
   m_Name: Quest_Jenga_7
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  text: ' Success Jenga 7 times'
+  text: "\uC820\uAC00 7\uBC88 \uC131\uACF5!"
   condition: {fileID: 11400000, guid: a36f9bece0ad54c4ea2449b5bc4af33a, type: 2}
   preQuests: []

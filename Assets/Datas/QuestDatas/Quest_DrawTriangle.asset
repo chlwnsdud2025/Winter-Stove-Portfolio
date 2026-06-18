@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc2c4d767767164ba85e1af42263e83, type: 3}
   m_Name: Quest_DrawTriangle
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  text: Draw Triangle!!
+  text: "\uC0BC\uAC01\uD615\uC744 \uADF8\uB9AC\uC138\uC694!"
   condition: {fileID: 11400000, guid: 251740fef8fffa24ca9a57c9878ebeb5, type: 2}
   preQuests: []

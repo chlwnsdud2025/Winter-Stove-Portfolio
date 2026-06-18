@@ -12,6 +12,8 @@ TagManager:
   - TrashCanZone
   - FlowerPot
   - Sponge
+  - projectile
+  - Jenga
   layers:
   - Default
   - TransparentFX

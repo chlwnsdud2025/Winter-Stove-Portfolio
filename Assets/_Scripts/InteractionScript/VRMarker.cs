@@ -11,7 +11,7 @@ public class VRMarker : MonoBehaviour
     public Transform linesParent;
 
     [Header("제스처 인식 최소 점수 (0.7 ~ 0.8 추천)")]
-    public float recognitionThreshold = 0.30f;
+    public float recognitionThreshold = 0.90f;
 
     private LineRenderer currentLine;
     private Vector3 previousPosition;
