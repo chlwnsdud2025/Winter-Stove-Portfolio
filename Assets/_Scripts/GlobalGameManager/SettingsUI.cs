@@ -78,4 +78,16 @@ public class SettingsUI : MonoBehaviour
     }
     public void OnApplyButton() => _settings.Save();
     public void OnCancelButton() => _settings.Load(); // 저장 안 하고 닫으면 롤백
+    public void OnGiveupButton()
+    {
+        CycleEvent_Nuclear.RaiseImmediate();
+    }
+    public void OnQuitButton()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 }
