@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc2c4d767767164ba85e1af42263e83, type: 3}
   m_Name: Quest_ConsumeWood
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  text: "\uB09C\uB85C\uC5D0 \uC7A5\uC791\uC744 \uB123\uC73C\uC138\uC694"
+  text: "\uB09C\uB85C\uC5D0 \uC7A5\uC791\uC744 \uB123\uC73C\uC138\uC694!"
   condition: {fileID: 11400000, guid: efe6108953a52094d84cb16a822e180a, type: 2}
   preQuests: []

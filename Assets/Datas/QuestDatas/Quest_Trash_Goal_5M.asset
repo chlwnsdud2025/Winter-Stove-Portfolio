@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc2c4d767767164ba85e1af42263e83, type: 3}
   m_Name: Quest_Trash_Goal_5M
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  text: Gaol in Trash_5M
+  text: "5M \uAC70\uB9AC\uC5D0\uC11C \uC4F0\uB808\uAE30 \uB123\uAE30! "
   condition: {fileID: 11400000, guid: b64bebd1be6947c4cae8a30947b417fb, type: 2}
   preQuests: []
