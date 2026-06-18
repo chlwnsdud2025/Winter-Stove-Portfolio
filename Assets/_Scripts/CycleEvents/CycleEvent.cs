@@ -22,7 +22,7 @@ public abstract class CycleEvent : MonoBehaviour
     }
     protected virtual void Update()
     {
-        if (IsPlaying || CheckRequired() == false)
+        if (IsPlaying || CheckRequired() == false || CycleEvent_Nuclear.IsRaised)
         {
             StartTime = Time.time;
             return;
