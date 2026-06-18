@@ -17,7 +17,7 @@ public class SoundManager : MonoBehaviour, ISoundManager
     [SerializeField] private AudioMixerGroup _bgmGroup;
     [SerializeField] private AudioMixerGroup _sfxGroup;
     int poolSize = 5;
-    private Queue<AudioSource> sfx_pool = new();
+    private Queue<AudioSource> sfx_pool;
 
     private AudioSource bgm_sourceA;
     private AudioSource bgm_sourceB;
@@ -25,7 +25,7 @@ public class SoundManager : MonoBehaviour, ISoundManager
 
     private void Awake()
     {
-        if(instance != null)
+        if (instance as Object != null) 
         {
             Destroy(gameObject);
             return;

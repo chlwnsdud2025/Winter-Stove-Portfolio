@@ -78,7 +78,7 @@ public class CycleEvent_QuestGiver : CycleEvent
             }
         }
         if(questAcceptedFlag)
-            SoundManager.Instance.PlaySFX(SFX_Accepted);
+            SoundManager.Instance?.PlaySFX(SFX_Accepted);
     }
     bool AddQuest(QuestData data)
     {
