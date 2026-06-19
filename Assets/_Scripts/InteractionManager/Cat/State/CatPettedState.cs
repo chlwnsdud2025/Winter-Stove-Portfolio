@@ -5,7 +5,7 @@ public class CatPettedState : CatBaseState
     private readonly int happyAnimHash = Animator.StringToHash("Take 001 (1)"); // 애교 애니메이션
 
     private float pettedTimer;
-    private float pettedDuration = 3.0f; // 3초간 애교 부리기
+    private float pettedDuration = 3f; // 3초간 애교 부리기
 
     public CatPettedState(CatController cat, CatStateMachine stateMachine) : base(cat, stateMachine) { }
 
