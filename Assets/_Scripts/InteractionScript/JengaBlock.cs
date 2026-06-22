@@ -33,4 +33,9 @@ public class JengaBlock : MonoBehaviour
         // (선택 사항) 성공한 블록은 더 이상 감지할 필요가 없으므로 콜라이더를 끄거나 
         // 레이어를 변경하여 물리 연산을 가볍게 최적화할 수도 있습니다.
     }
+
+    public void ResetBlockState()
+    {
+        isExtracted = false;
+    }
 }

@@ -589,6 +589,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 238250037290883060, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 238250037290883060, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 238250037290883060, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 385858389}
+    - target: {fileID: 238250037290883060, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 238250037290883060, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResetGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 238250037290883060, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: JengaManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 238250037290883060, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 407982995516040363, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
       propertyPath: m_Range
       value: 8.06
@@ -1929,6 +1957,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+--- !u!114 &385858389 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8072003824803294858, guid: b957298f77ef5a644addc875d9f742f0, type: 3}
+  m_PrefabInstance: {fileID: 385858388}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fd3d897a40c59444a3070313005b545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JengaManager
 --- !u!1001 &457418133
 PrefabInstance:
   m_ObjectHideFlags: 0

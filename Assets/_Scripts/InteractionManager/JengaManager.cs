@@ -70,4 +70,19 @@ public class JengaManager : MonoBehaviour
         //    statusText.text = $"성공한 블록: {currentSuccessCount} / {targetSuccessCount}";
         //}
     }
+
+    public void ResetGame()
+    {
+        isGameOver = false;
+        currentSuccessCount = 0;
+
+        // 씬에 있는 모든 젠가 블록을 찾아 상태 초기화
+        JengaBlock[] allBlocks = FindObjectsByType<JengaBlock>(FindObjectsSortMode.None);
+        foreach (JengaBlock block in allBlocks)
+        {
+            block.ResetBlockState();
+        }
+
+        Debug.Log("젠가 게임 리셋 완료!");
+    }
 }
